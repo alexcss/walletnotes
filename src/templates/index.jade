@@ -1,0 +1,169 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+        meta(name="description", content="")
+        meta(name="”keywords”", content="")
+        meta(name="robots", content="index,follow")
+        title Walletnotes
+        link(href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css", rel="stylesheet")
+        link(rel="stylesheet", href="css/main.css")
+    body
+        .wrapper
+            header.navbar.navbar-fixed-top(role="navigation")
+                .container
+                    .navbar-header
+                        button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+                            span.sr-only Toggle navigation
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                        a#logo.navbar-brand(href="index.html")
+                            img(src="img/logo.png", alt="Walletnotes logo", title="Walletnotes")
+                    .navbar-collapse.collapse
+                        ul.nav.navbar-nav
+                            li.active
+                                a(href="index.html") HOME
+                            li
+                                a(href="create.html") CREATE
+                            li
+                                a(href="redeem.html") REDEEM
+            #message
+                .container
+                    h1
+                        | BITCOINS WILL NEVER BE
+                        br
+                        | EASER FROM NOW!
+                        br
+                    p How easy to use can Bitcoin be for any person?
+                    p From our point of view, it can be even easer, than cash.
+                    button.btn(onclick="location.href='/create.html'") TRY NOW
+            #just
+                .container
+                    h1 JUST CREATE IT, PRINT IT, SPEND IT
+                    .row
+                        .col-xs-12.col-sm-6.col-sm-offset-1.col-md-6.col-md-offset-0
+                            p
+                                | No cash desk or ATM needed: just your Bitcoin wallet and printer. Merchant accepts bitcoins, but doesn&#8217;t accept Walletnotes? Hummm&#8230; He should think about this :) But never mind!
+                            p
+                                | You can redeem your walletnote to your Bitcoin wallet and spend bitcoins as usually you do &#8212; once again
+                                | you don&#8217;t need cash desk or ATM.
+                        .hand-wrapper.pull-right.right.col-xs-12.col-sm-5
+                            img.pull-right(src="img/hand_up.png", alt="")
+                            .hand-line
+            #becomes
+                .container
+                    h1
+                        | Bitcoins becomes the best gift
+                        br
+                        | with Walletnotes!
+                    p
+                        | Create the walletnote and gift it to your friend&#8217;s birthday or wedding. Even if he doesn&#8217;t have
+                        br
+                        | a Bitcoin wallet, he will receive those beautiful digital coins.
+            #contribute
+                .container
+                    .mails-1.hidden-xs
+                        img(src="img/m1_b.png", alt="", id="m1_b")
+                        img(src="img/m1_m.png", alt="", id="m1_m")
+                        img(src="img/m1_s.png", alt="", id="m1_s")
+
+                    .content.col-xs-12.col-sm-12
+                        h1
+                            | Contribute in Bitcoin mass
+                            br
+                            | adoption with Walletnotes
+                        p
+                            | Make donations with Walletnotes to everybody, who doesn&#8217;t have bitcoin wallet
+                            br
+                            | or doesn&#8217;t even know about Bitcoin: by email, IM, or even direct SMS &#8212;
+                            br
+                            | no hard-to-type addresses or secret keys.
+                    .mails-2.hidden-xs
+                        img(src="img/m2_b.png", alt="", id="m2_b")
+                        img(src="img/m2_m.png", alt="", id="m2_m")
+                        img(src="img/m2_s.png", alt="", id="m2_s")
+            #even
+                .container
+                    h1 EVEN SAFER THAN CASH
+                    .col-xs-12.col-sm-6.col-sm-offset-2
+                        p
+                            | Each walletnote is protected with PIN-code. Just keep it safe: even if stolen, you can easily recover your Walletnotes and print them again.
+                    .lock
+                        img(src="img/lock.png", alt="")
+            #simple
+                .container
+                    h1 SIMPLE TO VALIDATE
+                    .col-xs-12.col-sm-12
+                        p
+                            | Agree to accept walletnote, but need to validate it? You can easily check it at redeem page, and transact bitcoins to your wallet at the same time. Don&#8217;t have or forgot your bitcoin address? Don&#8217;t worry! Just change PIN and proceed with the same walletnote &#8212; now it only belongs to you!
+            #soulful
+                .container
+                    .row
+                        h1 SOULFUL BITCOINS
+                        .col-xs-12.col-sm-7.col-md-8.pull-right
+                            p
+                                | Print the bundle of Walletnotes and feel yourself rich :)
+                                | With Walletnotes, Bitcoin shifts from digital and cold to warm and tactile!
+                        .hand-wrapper.pull-left.left.col-xs-12.col-sm-5.col-md-4
+                            img(src="img/hand_down.png", alt="")
+                            .hand-line.pull-left
+            #footer
+                .container
+                    h1
+                        | Walletnotes &#8212; YOUR CAP
+                        br
+                        | OF INVISIBILITY
+                    p
+                        | With Walletnotes you can turn your off all your devices and pay outside all networks.
+                        br
+                        | Feel the harmony of bitcoin&#8217;s privacy religion. No registration required for creating
+                        br
+                        | or redeeming Walletnotes!
+                    button.btn(onclick="location.href='/create.html'") TRY NOW
+            .push
+        .bottomLine
+            h5
+                .col-xs-12.col-sm-3.copyright © 2014 Walletnotes
+                .col-xs-12.col-sm-6.tranc.support
+                    a.bitcoin-address(data-contentwrapper="#qr-addres-donate", rel="popover", data-amount="$10", href="bitcoin:19EYNZQHJceKEqejA2M1Hp9jsQ73yuNyZU") Support the project:
+                        span.bitlink 19EYNZQHJceKEqejA2M1Hp9jsQ73yuNyZU
+                .col-xs-12.col-sm-3.social
+                    a(href="#")
+                        img(src="img/face.png")
+                    a(href="#")
+                        img(src="img/mail.png")
+                    a(href="#")
+                        img(src="img/twit.png")
+                //a(href="#contactModal", data-toggle="modal") Contact us
+        //#qr-addres-donate(hidden="")
+        // Modal Question form
+        //#contactModal.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true", style="")
+            .modal-dialog
+                .modal-content
+                    .modal-header
+                        button.close(type="button", data-dismiss="modal", aria-hidden="true") &#215;
+                        h4#myModalLabel.modal-title Contact us
+                    .modal-body.clearfix
+                        #registerModalerror(style="display: none;")
+                        form#form-contact(enctype="multipart/form-data", method="post")
+                            .row-fluid
+                                label(for="message-text") Your message *
+                                p
+                                    textarea#message-text.form-control(cols="80", rows="8", name="message")
+                                label(for="message-name") Your name
+                                p
+                                    input#message-name.form-control(type="text", name="name", size="20", maxlength="255", value="")
+                                label(for="message-email") Your email
+                                p
+                                    input#message-email.form-control(type="text", name="email", size="20", maxlength="255", value="")
+                            .modal-footer
+                                button#registerModalsubmit.btn.btn-lg.btn-primary(type="submit", name="send_message", style="margin-top: 0;") Submit
+        script(src="//code.jquery.com/jquery-1.11.1.min.js")
+        script(src="js/greensock/TweenMax.min.js")
+        script(src="js/jquery.qrcode-0.8.0.min.js")
+        script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
+        script(src="js/jquery.superscrollorama.js")
+        script(src="js/main.js")
+                       
