@@ -32,8 +32,15 @@ body{
   margin: 0 auto;
 }
 
-a {
+a,
+button,
+.bitcoin-address {
   transition: 350ms;
+}
+a:hover, a:focus {
+  text-decoration: none;
+  outline: none;
+  border: 0;
 }
 
 /*------------Navbar------------*/
@@ -100,13 +107,15 @@ height: 50px;
   background-color: #0B1A37;
   height: auto;
   width: 100%;
-  z-index: 1000;
+  z-index: 9999;
   text-align: center;
   padding-top: 10px;
-  overflow: hidden;
+  overflow: visible;
   color: #FFF;
-
-  h5{
+  *{
+    z-index: 9999;
+  }
+  .bl-block{
     max-width: 990px;
     margin: 0 auto;
     font-size: 14px;
@@ -124,6 +133,7 @@ span.qrcodeicon span {
   cursor: pointer;
   z-index: 1;
 }
+
 span.qrcodeicon {
   position: relative;
 }
@@ -160,11 +170,7 @@ h1{
   margin-bottom: 40px;
   text-transform: uppercase;
 }
-.tranc{
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+
 
 /*footer */
 .copyright{
@@ -180,10 +186,33 @@ h1{
   }
 }
 .social {
-  padding: 6px;
+  padding: 3px 6px;
+  text-align: center;
   a{
-    padding: 0 10px;
+    padding: 0 16px;
+    display: inline-block;
+    width: 16px;
+    height:16px;
   }
+  .face{
+    background:transparent url('../img/face.png') center top no-repeat;
+  }
+  .face:hover{
+    background:transparent url('../img/faceH.png') center top no-repeat;
+  }
+  .mail{
+    background:transparent url('../img/mail.png') center top no-repeat;
+  }
+  .mail:hover{
+    background:transparent url('../img/mailH.png') center top no-repeat;
+  }
+  .twit{
+    background:transparent url('../img/twit.png') center top no-repeat;
+  }
+  .twit:hover{
+    background:transparent url('../img/twitH.png') center top no-repeat;
+  }
+
 }
 
 
@@ -330,6 +359,7 @@ h1{
   max-height: 550px;
   height: 550px;
   background-size: cover;
+  margin-bottom: 40px;
   p{
     font-family: 'PT Sans Caption';
     margin-bottom: 14px;
@@ -382,6 +412,9 @@ h1{
 .btn-action{
   text-align: center;
 }
+.bitcoin-address:hover *{
+  color: #fff;
+}
 
 
 
@@ -393,9 +426,6 @@ h1{
   }
   a:hover{
     background-color: transparent!important;
-  }
-  .tranc {
-    width: 100%;
   }
   .navbar-fixed-top {
     position: relative!important;
@@ -462,7 +492,7 @@ h1{
     li{
       margin-left: 10px;
       a {
-        padding: 10px 6px 6px 6px;
+        padding: 6px 6px 6px 6px;
       }
     }
   }

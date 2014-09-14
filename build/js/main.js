@@ -169,7 +169,7 @@ $(document).ready(function(data) {
         render: 'image',
         size: 150,
         fill: '#1c1c1c',
-        text: "bitcoin:1McfTNwrSJkXAxxfWvEtxWkMwGt3rJDsvr",
+        text: "bitcoin:1McfTNwrSJkXAxxfWvEtxWkMwGt3rJDsvr"
     });
 
     $('#form-contact').submit(function (e) {

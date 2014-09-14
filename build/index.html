@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="">
-    <meta name="”keywords”" content="">
+    <meta name="keywords" content="">
     <meta name="robots" content="index,follow">
     <title>Walletnotes</title>
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="favicon.ico">
   </head>
   <body>
     <div class="wrapper">
-      <header role="navigation" class="navbar navbar-fixed-top">
+      <div role="navigation" class="navbar navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
             <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a id="logo" href="index.html" class="navbar-brand"><img src="img/logo.png" alt="Walletnotes logo" title="Walletnotes"></a>
@@ -25,7 +26,7 @@
             </ul>
           </div>
         </div>
-      </header>
+      </div>
       <div id="message">
         <div class="container">
           <h1>BITCOINS WILL NEVER BE<br>EASER FROM NOW!<br></h1>
@@ -110,37 +111,50 @@
       <div class="push"></div>
     </div>
     <div class="bottomLine">
-      <h5>
+      <div class="bl-block">
         <div class="col-xs-12 col-sm-3 copyright">© 2014 Walletnotes</div>
-        <div class="col-xs-12 col-sm-6 tranc support"><a data-contentwrapper="#qr-addres-donate" rel="popover" data-amount="$10" href="bitcoin:19EYNZQHJceKEqejA2M1Hp9jsQ73yuNyZU" class="bitcoin-address">Support the project:<span class="bitlink">19EYNZQHJceKEqejA2M1Hp9jsQ73yuNyZU</span></a></div>
-        <div class="col-xs-12 col-sm-3 social"><a href="#"><img src="img/face.png"></a><a href="#"><img src="img/mail.png"></a><a href="#"><img src="img/twit.png"></a></div>
+        <div class="col-xs-12 col-sm-6 support"><a data-contentwrapper="#qr-addres-donate" rel="popover" data-amount="$10" href="bitcoin:19EYNZQHJceKEqejA2M1Hp9jsQ73yuNyZU" class="bitcoin-address">Support the project:<span class="bitlink"> 19EYNZQHJceKEqejA2M1Hp9jsQ73yuNyZU</span></a></div>
+        <div class="col-xs-12 col-sm-3 social"><a href="#" class="face">
+            <!--img(src="img/face.png", alt="")--></a><a href="#contactModal" data-toggle="modal" class="mail">
+            <!--img(src="img/mail.png", alt="")--></a><a href="#" class="twit">
+            <!--img(src="img/twit.png", alt="")--></a></div>
         <!--a(href="#contactModal", data-toggle="modal") Contact us-->
-      </h5>
+      </div>
     </div>
-    <!--#qr-addres-donate(hidden="")-->
+    <div id="qr-addres-donate" hidden=""></div>
     <!-- Modal Question form-->
-    <!--#contactModal.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true", style="")
-    .modal-dialog
-        .modal-content
-            .modal-header
-                button.close(type="button", data-dismiss="modal", aria-hidden="true") &#215;
-                h4#myModalLabel.modal-title Contact us
-            .modal-body.clearfix
-                #registerModalerror(style="display: none;")
-                form#form-contact(enctype="multipart/form-data", method="post")
-                    .row-fluid
-                        label(for="message-text") Your message *
-                        p
-                            textarea#message-text.form-control(cols="80", rows="8", name="message")
-                        label(for="message-name") Your name
-                        p
-                            input#message-name.form-control(type="text", name="name", size="20", maxlength="255", value="")
-                        label(for="message-email") Your email
-                        p
-                            input#message-email.form-control(type="text", name="email", size="20", maxlength="255", value="")
-                    .modal-footer
-                        button#registerModalsubmit.btn.btn-lg.btn-primary(type="submit", name="send_message", style="margin-top: 0;") Submit
-    -->
+    <div id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&#215;</button>
+            <h4 id="myModalLabel" class="modal-title">Contact us</h4>
+          </div>
+          <div class="modal-body clearfix">
+            <div id="registerModalerror" style="display: none;"></div>
+            <form id="form-contact" enctype="multipart/form-data" method="post">
+              <div class="row-fluid">
+                <label for="message-text">Your message *</label>
+                <p>
+                  <textarea id="message-text" cols="80" rows="8" name="message" class="form-control"></textarea>
+                </p>
+                <label for="message-name">Your name</label>
+                <p>
+                  <input id="message-name" type="text" name="name" size="20" maxlength="255" value="" class="form-control">
+                </p>
+                <label for="message-email">Your email</label>
+                <p>
+                  <input id="message-email" type="text" name="email" size="20" maxlength="255" value="" class="form-control">
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button id="registerModalsubmit" type="submit" name="send_message" style="margin-top: 0;" class="btn btn-lg btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="js/greensock/TweenMax.min.js"></script>
     <script src="js/jquery.qrcode-0.8.0.min.js"></script>

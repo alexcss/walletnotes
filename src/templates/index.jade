@@ -4,14 +4,15 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
         meta(name="description", content="")
-        meta(name="”keywords”", content="")
+        meta(name="keywords", content="")
         meta(name="robots", content="index,follow")
         title Walletnotes
         link(href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css", rel="stylesheet")
         link(rel="stylesheet", href="css/main.css")
+        link(rel="icon" href="favicon.ico")
     body
         .wrapper
-            header.navbar.navbar-fixed-top(role="navigation")
+            .navbar.navbar-fixed-top(role="navigation")
                 .container
                     .navbar-header
                         button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
@@ -124,22 +125,22 @@ html(lang="en")
                     button.btn(onclick="location.href='/create.html'") TRY NOW
             .push
         .bottomLine
-            h5
+            .bl-block
                 .col-xs-12.col-sm-3.copyright © 2014 Walletnotes
-                .col-xs-12.col-sm-6.tranc.support
+                .col-xs-12.col-sm-6.support
                     a.bitcoin-address(data-contentwrapper="#qr-addres-donate", rel="popover", data-amount="$10", href="bitcoin:19EYNZQHJceKEqejA2M1Hp9jsQ73yuNyZU") Support the project:
-                        span.bitlink 19EYNZQHJceKEqejA2M1Hp9jsQ73yuNyZU
+                        span.bitlink  19EYNZQHJceKEqejA2M1Hp9jsQ73yuNyZU
                 .col-xs-12.col-sm-3.social
-                    a(href="#")
-                        img(src="img/face.png")
-                    a(href="#")
-                        img(src="img/mail.png")
-                    a(href="#")
-                        img(src="img/twit.png")
+                    a.face(href="#")
+                        //img(src="img/face.png", alt="")
+                    a.mail(href="#contactModal" data-toggle="modal")
+                        //img(src="img/mail.png", alt="")
+                    a.twit(href="#")
+                        //img(src="img/twit.png", alt="")
                 //a(href="#contactModal", data-toggle="modal") Contact us
-        //#qr-addres-donate(hidden="")
+        #qr-addres-donate(hidden="")
         // Modal Question form
-        //#contactModal.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true", style="")
+        #contactModal.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true", style="")
             .modal-dialog
                 .modal-content
                     .modal-header
