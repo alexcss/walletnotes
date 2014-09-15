@@ -12,7 +12,7 @@ html(lang="en")
         link(rel="icon" href="favicon.ico")
     body
         .wrapper
-            .navbar.navbar-fixed-top(role="navigation")
+            header.navbar.navbar-fixed-top(role="navigation")
                 .container
                     .navbar-header
                         button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
@@ -27,7 +27,7 @@ html(lang="en")
                             li.active
                                 a(href="index.html") HOME
                             li
-                                a(href="create.html") CREATE
+                                a(href="http://coderbit.net/works/wallet/create.html") CREATE
                             li
                                 a(href="redeem.html") REDEEM
             #message
@@ -39,7 +39,8 @@ html(lang="en")
                         br
                     p How easy to use can Bitcoin be for any person?
                     p From our point of view, it can be even easer, than cash.
-                    button.btn(onclick="location.href='/create.html'") TRY NOW
+                    //button.btn(onclick="location.href='http://coderbit.net/works/wallet/'") TRY NOW
+                    a.btn(href='#') TRY NOW
             #just
                 .container
                     h1 JUST CREATE IT, PRINT IT, SPEND IT
@@ -110,7 +111,7 @@ html(lang="en")
                         .hand-wrapper.pull-left.left.col-xs-12.col-sm-5.col-md-4
                             img(src="img/hand_down.png", alt="")
                             .hand-line.pull-left
-            #footer
+            footer#footer
                 .container
                     h1
                         | Walletnotes &#8212; YOUR CAP
@@ -122,27 +123,32 @@ html(lang="en")
                         | Feel the harmony of bitcoin&#8217;s privacy religion. No registration required for creating
                         br
                         | or redeeming Walletnotes!
-                    button.btn(onclick="location.href='/create.html'") TRY NOW
+                    a.btn(href='#') TRY NOW
             .push
         .bottomLine
             .bl-block
                 .col-xs-12.col-sm-3.copyright © 2014 Walletnotes
                 .col-xs-12.col-sm-6.support
                     a.bitcoin-address(data-contentwrapper="#qr-addres-donate", rel="popover", data-amount="$10", href="bitcoin:19EYNZQHJceKEqejA2M1Hp9jsQ73yuNyZU") Support the project:
-                        span.bitlink  19EYNZQHJceKEqejA2M1Hp9jsQ73yuNyZU
+                        span.bitlink  19EYNZQHJceKEqejA2M1Hp9jsQ73yuNyZ
+                    .qrSupport
+                        img(src="img/qrSup.png")
                 .col-xs-12.col-sm-3.social
-                    a.face(href="#")
-                        //img(src="img/face.png", alt="")
                     a.mail(href="#contactModal" data-toggle="modal")
                         //img(src="img/mail.png", alt="")
+                    a.face(href="#")
+                                           //img(src="img/face.png", alt="")
                     a.twit(href="#")
                         //img(src="img/twit.png", alt="")
                 //a(href="#contactModal", data-toggle="modal") Contact us
-        #qr-addres-donate(hidden="")
+        //#qr-addres-donate(hidden="")
         // Modal Question form
         #contactModal.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true", style="")
             .modal-dialog
-                .modal-content
+                .modal-content.contactUs
+                    span.require
+                        span.require-red *
+                        |  required fields
                     .modal-header
                         button.close(type="button", data-dismiss="modal", aria-hidden="true") &#215;
                         h4#myModalLabel.modal-title Contact us
@@ -150,7 +156,8 @@ html(lang="en")
                         #registerModalerror(style="display: none;")
                         form#form-contact(enctype="multipart/form-data", method="post")
                             .row-fluid
-                                label(for="message-text") Your message *
+                                label(for="message-text") Your message
+                                    span.require-red *
                                 p
                                     textarea#message-text.form-control(cols="80", rows="8", name="message")
                                 label(for="message-name") Your name
@@ -162,9 +169,8 @@ html(lang="en")
                             .modal-footer
                                 button#registerModalsubmit.btn.btn-lg.btn-primary(type="submit", name="send_message", style="margin-top: 0;") Submit
         script(src="//code.jquery.com/jquery-1.11.1.min.js")
-        script(src="js/greensock/TweenMax.min.js")
+        script(src="js/TweenMax.min.js")
         script(src="js/jquery.qrcode-0.8.0.min.js")
         script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
         script(src="js/jquery.superscrollorama.js")
         script(src="js/main.js")
-                       

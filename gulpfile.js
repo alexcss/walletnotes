@@ -57,7 +57,7 @@ gulp.task('glueJs', function() {
 gulp.task ('sass', function() {
     var config = {};
     // development
-        config.sourceComments = 'map';
+    //    config.sourceComments = 'map';
     // production
         //config.outputStyle = 'compressed';
 

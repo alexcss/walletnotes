@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <div role="navigation" class="navbar navbar-fixed-top">
+      <header role="navigation" class="navbar navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
             <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a id="logo" href="index.html" class="navbar-brand"><img src="img/logo.png" alt="Walletnotes logo" title="Walletnotes"></a>
@@ -21,18 +21,18 @@
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li class="active"><a href="index.html">HOME</a></li>
-              <li><a href="create.html">CREATE</a></li>
+              <li><a href="http://coderbit.net/works/wallet/create.html">CREATE</a></li>
               <li><a href="redeem.html">REDEEM</a></li>
             </ul>
           </div>
         </div>
-      </div>
+      </header>
       <div id="message">
         <div class="container">
           <h1>BITCOINS WILL NEVER BE<br>EASER FROM NOW!<br></h1>
           <p>How easy to use can Bitcoin be for any person?</p>
           <p>From our point of view, it can be even easer, than cash.</p>
-          <button onclick="location.href='/create.html'" class="btn">TRY NOW</button>
+          <!--button.btn(onclick="location.href='http://coderbit.net/works/wallet/'") TRY NOW--><a href="#" class="btn">TRY NOW</a>
         </div>
       </div>
       <div id="just">
@@ -101,31 +101,32 @@
           </div>
         </div>
       </div>
-      <div id="footer">
+      <footer id="footer">
         <div class="container">
           <h1>Walletnotes &#8212; YOUR CAP<br>OF INVISIBILITY</h1>
-          <p>With Walletnotes you can turn your off all your devices and pay outside all networks.<br>Feel the harmony of bitcoin&#8217;s privacy religion. No registration required for creating<br>or redeeming Walletnotes!</p>
-          <button onclick="location.href='/create.html'" class="btn">TRY NOW</button>
+          <p>With Walletnotes you can turn your off all your devices and pay outside all networks.<br>Feel the harmony of bitcoin&#8217;s privacy religion. No registration required for creating<br>or redeeming Walletnotes!</p><a href="#" class="btn">TRY NOW</a>
         </div>
-      </div>
+      </footer>
       <div class="push"></div>
     </div>
     <div class="bottomLine">
       <div class="bl-block">
         <div class="col-xs-12 col-sm-3 copyright">© 2014 Walletnotes</div>
-        <div class="col-xs-12 col-sm-6 support"><a data-contentwrapper="#qr-addres-donate" rel="popover" data-amount="$10" href="bitcoin:19EYNZQHJceKEqejA2M1Hp9jsQ73yuNyZU" class="bitcoin-address">Support the project:<span class="bitlink"> 19EYNZQHJceKEqejA2M1Hp9jsQ73yuNyZU</span></a></div>
-        <div class="col-xs-12 col-sm-3 social"><a href="#" class="face">
-            <!--img(src="img/face.png", alt="")--></a><a href="#contactModal" data-toggle="modal" class="mail">
-            <!--img(src="img/mail.png", alt="")--></a><a href="#" class="twit">
+        <div class="col-xs-12 col-sm-6 support"><a data-contentwrapper="#qr-addres-donate" rel="popover" data-amount="$10" href="bitcoin:19EYNZQHJceKEqejA2M1Hp9jsQ73yuNyZU" class="bitcoin-address">Support the project:<span class="bitlink"> 19EYNZQHJceKEqejA2M1Hp9jsQ73yuNyZ</span></a>
+          <div class="qrSupport"><img src="img/qrSup.png"></div>
+        </div>
+        <div class="col-xs-12 col-sm-3 social"><a href="#contactModal" data-toggle="modal" class="mail">
+            <!--img(src="img/mail.png", alt="")--></a><a href="#" class="face">
+            <!--img(src="img/face.png", alt="")--></a><a href="#" class="twit">
             <!--img(src="img/twit.png", alt="")--></a></div>
         <!--a(href="#contactModal", data-toggle="modal") Contact us-->
       </div>
     </div>
-    <div id="qr-addres-donate" hidden=""></div>
+    <!--#qr-addres-donate(hidden="")-->
     <!-- Modal Question form-->
     <div id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="" class="modal fade">
       <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content contactUs"><span class="require"><span class="require-red">*</span> required fields</span>
           <div class="modal-header">
             <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&#215;</button>
             <h4 id="myModalLabel" class="modal-title">Contact us</h4>
@@ -134,7 +135,7 @@
             <div id="registerModalerror" style="display: none;"></div>
             <form id="form-contact" enctype="multipart/form-data" method="post">
               <div class="row-fluid">
-                <label for="message-text">Your message *</label>
+                <label for="message-text">Your message<span class="require-red">*</span></label>
                 <p>
                   <textarea id="message-text" cols="80" rows="8" name="message" class="form-control"></textarea>
                 </p>
@@ -156,7 +157,7 @@
       </div>
     </div>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="js/greensock/TweenMax.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
     <script src="js/jquery.qrcode-0.8.0.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="js/jquery.superscrollorama.js"></script>

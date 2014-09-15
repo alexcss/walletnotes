@@ -122,7 +122,7 @@ $(document).ready(function(data) {
                 render: 'image',
                 size: 150,
                 fill: '#3a3',
-                text: "http://bitknotes.org/man?sn=" + serial,
+                text: "http://bitknotes.org/man?sn=" + serial
             });
             var qr = $("#serial-code").children("img").attr("src");
             doc.addImage(qr, 'JPEG', 115, 37.1, 30, 30);
@@ -165,12 +165,20 @@ $(document).ready(function(data) {
         }
     });
 
-    $("#qr-addres-donate").qrcode({
-        render: 'image',
-        size: 150,
-        fill: '#1c1c1c',
-        text: "bitcoin:1McfTNwrSJkXAxxfWvEtxWkMwGt3rJDsvr"
-    });
+    //$("#qr-addres-donate").qrcode({
+    //    render: 'image',
+    //    size: 150,
+    //    fill: '#1c1c1c',
+    //    text: "bitcoin:1McfTNwrSJkXAxxfWvEtxWkMwGt3rJDsvr"
+    //});
+
+    //// fadein qr on index page
+    //$('.support').hover(function(){
+    //        $('.qrSupport').fadeIn()
+    //    }, function(){
+    //        $('.qrSupport').fadeOut()
+    //    }
+    //);
 
     $('#form-contact').submit(function (e) {
         e.preventDefault();
