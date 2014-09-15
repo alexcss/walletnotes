@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+        meta(name="description", content="")
+        meta(name="keywords", content="")
+        meta(name="robots", content="index,follow")
+        title Walletnotes
+        link(href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css", rel="stylesheet")
+        link(rel="stylesheet", href="css/main.css")
+        link(rel="icon" href="favicon.ico")
+    body
+        .wrapper
+            header.navbar.navbar-fixed-top(role="navigation")
+                .container
+                    .navbar-header
+                        button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+                            span.sr-only Toggle navigation
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                        a#logo.navbar-brand(href="index.html")
+                            img(src="img/logo.png", alt="Walletnotes logo", title="Walletnotes")
+                    .navbar-collapse.collapse
+                        ul.nav.navbar-nav
+                            li.active
+                                a(href="index.html") HOME
+                            li
+                                a(href="create.html") CREATE
+                            li
+                                a(href="redeem.html") REDEEM
+
+
+    script(src="//code.jquery.com/jquery-1.11.1.min.js")
+    script(src="js/TweenMax.min.js")
+    script(src="js/jquery.qrcode-0.8.0.min.js")
+    script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
+    script(src="js/jquery.superscrollorama.js")
+    script(src="js/main.js")

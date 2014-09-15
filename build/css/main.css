@@ -813,7 +813,6 @@ label[for="message-email"] {
   text-align: center;
   margin-top: 33px; }
   .modal-footer button {
-    width: auto;
     max-width: 220px;
     text-transform: uppercase; }
     .modal-footer button:hover {
@@ -858,7 +857,11 @@ label[for="message-email"] {
     z-index: 8888; }
   .bottomLine {
     overflow: visible;
-    height: 100px; } }
+    height: 100px; }
+  .contactUs {
+    padding: 19px 0px 0 0px; }
+  .modal-footer button {
+    width: 200px; } }
 
 @media (min-width: 768px) {
   .container {
