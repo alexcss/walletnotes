@@ -7,11 +7,11 @@ html(lang="en")
         meta(name="keywords", content="")
         meta(name="robots", content="index,follow")
         title Walletnotes
-        link(href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css", rel="stylesheet")
+        link(href="bootstrap/3.2.0/css/bootstrap.min.css", rel="stylesheet")
         link(rel="stylesheet", href="css/main.css")
         link(rel="icon" href="favicon.ico")
     body
-        .wrapper
+        .wrapper#create
             header.navbar.navbar-fixed-top(role="navigation")
                 .container
                     .navbar-header
@@ -24,17 +24,151 @@ html(lang="en")
                             img(src="img/logo.png", alt="Walletnotes logo", title="Walletnotes")
                     .navbar-collapse.collapse
                         ul.nav.navbar-nav
-                            li.active
-                                a(href="index.html") HOME
                             li
+                                a(href="index.html") HOME
+                            li.active
                                 a(href="create.html") CREATE
                             li
                                 a(href="redeem.html") REDEEM
+            .panels
+                .attention-panel
+                    p   <b>Attention!</b>
+                        | This is only the prototype of the service
+                        br
+                        | The security is our highest priority, but we are still about to improve it. Do not use the service
+                        br
+                        | for signifiacant amount of bitcoins! All actions here are at your own risk.
+                -//.row
+                    .service-info-panel
+                        p   <b>Service charges:</b> <br>
+                            | 0.1 mBTC - miner"s fee for future redeem transaction, will apply when creating walletnote;
+                            br
+                            | 0.1% - service fee, will apply when redeeming (changing PIN instead is free)
+                .container
+                    .row
+                        .conditions
+                            button#conditions.btn Accept conditions bellow
+            #step1.steps(hidden="")
+                .container
+                    .stepDots
+                        div.step1-dot.active-dot
+                        div.step2-dot
+                    .col-xs-12
+                        h1 step 1
+                    .col-xs-12
+                        div.greenLine
+                        h4 Choose denomination and enter PIN (or leave as default):
+                    .col-xs-12.col-sm-3.col-sm-offset-3
+                            select#id_amount.form-control(name="amount")
+                                option(value="0.001") 1 mBTC
+                                option(value="0.002") 2 mBTC
+                                option(value="0.005") 5 mBTC
+                                option(value="0.01") 10 mBTC
+                                option(value="0.02") 20 mBTC
+                                option(value="0.05") 50 mBTC
+                                option(selected="", value="0.1") 100 mBTC
+                                option(value="0.2") 200 mBTC
+                                option(value="0.5") 500 mBTC
+                        .col-xs-12.col-sm-3
+                            input#id_pincode.form-control(type="text", name="pincode", title="8 or more any digits or letters.\
+                      <br/> 4 different symbols at latest.\
+                      <br/>By default PIN will be as following.", rel="tooltip", data-html="true", data-placement="bottom", placeholder="0000 0000")
+                    .col-xs-12.col-sm-6.col-sm-offset-3
+                            p.donate
+                                input#id_donate(type="checkbox", name="donate")
+                                label(for="id_donate") Support the project (add 0.5% donation.)
+                    .col-xs-12.col-sm-6.col-sm-offset-3(style="text-align: center;")
+                            input#submit.btn(type="submit", value="Submit")
+            .clearfix
+            #step2.steps(hidden="")
+                .container
+                    .stepDots
+                        div.step1-dot
+                        div.step2-dot.active-dot
+                    .col-xs-12
+                        .row
+                            h1 Walletnote details
+                    .col-xs-12
+                        div.greenLine
+                    .col-xs-12.col-sm-7
+                        h5 <b>Address</b>: 1uBRJ5Rtoe4ZA3dqQJkj9U8KHVePMMs7o
+                        h5 <b>Amount</b>: 1001 mB (miner's fee included)
+                        .walletDetails
+                            h3 Wallet details
+                            h4 <b>S/N</b>: AAA 0000 0000 0000 0000
+                            h4 <b>PIN</b>: 00000000
+                    .col-xs-12.col-sm-5.qr
+                        #qr_code
+                        .qtDetails
+                            p Scan this QR-code with your mobile wallet
+                                | or
+                                a(href='#')  click here
+                                |  to use your desctop wallet
+                    .col-xs-12.printOut
+                        p Payment must be completed within 20 minutes. <br> After payment, print out your walletnote!
+                        a.btn(href="#" onclick="return false;" data-toggle="modal" data-target="#print-walletnote") PRINT
+
+        .push.create-push
+    .bottomLine.bottomLine-create
+        .bl-block
+            .col-xs-12.col-sm-3.copyright © 2014 Walletnotes
+            .col-xs-12.col-sm-6.support
+                a.bitcoin-address(data-contentwrapper="#qr-addres-donate", rel="popover", data-amount="$10", href="bitcoin:19EYNZQHJceKEqejA2M1Hp9jsQ73yuNyZU") Support the project:
+                    span.bitlink  19EYNZQHJceKEqejA2M1Hp9jsQ73yuNyZ
+                .qrSupport
+                    img(src="img/qrSup.png")
+            .col-xs-12.col-sm-3.social
+                a.mail(href="#contactModal" data-toggle="modal")
+                a.face(href="#")
+                a.twit(href="#")
+    #contactModal.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true", style="")
+        .modal-dialog
+            .modal-content.contactUs
+                span.require
+                    span.require-red *
+                    |  required fields
+                .modal-header
+                    button.close(type="button", data-dismiss="modal", aria-hidden="true") &#215;
+                    h4#myModalLabel.modal-title Contact us
+                .modal-body.clearfix
+                    #registerModalerror(style="display: none;")
+                    form#form-contact(enctype="multipart/form-data", method="post")
+                        .row-fluid
+                            label(for="message-text") Your message
+                                span.require-red *
+                            p
+                                textarea#message-text.form-control(cols="80", rows="8", name="message")
+                            label(for="message-name") Your name
+                            p
+                                input#message-name.form-control(type="text", name="name", size="20", maxlength="255", value="")
+                            label(for="message-email") Your email
+                            p
+                                input#message-email.form-control(type="text", name="email", size="20", maxlength="255", value="")
+                        .modal-footer
+                            button#registerModalsubmit.btn(type="submit", name="send_message", style="margin-top: 0;") Submit
+    .modal.fade#print-walletnote(aria-hidden="true")
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    button(type="button" class="close" data-dismiss="modal") <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    h4.modal-title Print walletnote!
+                .modal-body.
+                    <img src="#" alt="" id="walletnote-img" width="570">
+                    <div id="serial-number-qr"></div>
+                    <div id="serial-number"></div>
+                        <button class="btn" id="walletnote-download">Download</button>
+                    <div id="pin-print"></div>
+                .modal-footer
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 
 
-    script(src="//code.jquery.com/jquery-1.11.1.min.js")
+    //script(src="//code.jquery.com/jquery-1.11.1.min.js")
+    script(src="js/jquery-1.11.1.min.js")
     script(src="js/TweenMax.min.js")
     script(src="js/jquery.qrcode-0.8.0.min.js")
-    script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
+    script(src="bootstrap/3.2.0/js/bootstrap.min.js")
     script(src="js/jquery.superscrollorama.js")
+        //<script src="inc/TimeCircles.js"></script>
+        <script src="js/jspdf.min.js"></script>
+        <script src="js/md5-min.js"></script>
     script(src="js/main.js")
