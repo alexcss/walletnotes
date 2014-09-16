@@ -759,7 +759,7 @@ h1 {
   .steps h1 {
     padding-top: 100px;
     color: #fff;
-    font-family: "Proxima Nova";
+    font-family: 'Proxima Nova Rg';
     font-size: 50px;
     margin-bottom: 0;
     padding-bottom: 0; }
@@ -821,20 +821,19 @@ h1 {
 #step2 #qr_code {
   width: 220px;
   height: 210px;
-  background: #fff; }
+  background: #fff;
+  border-radius: 3px; }
   #step2 #qr_code canvas {
     padding: 17px 19px; }
-#step2 .qtDetails {
-  opacity: 0.65; }
-  #step2 .qtDetails p {
-    line-height: 20px;
-    margin-top: 40px;
-    font-size: 14px;
-    color: #fff;
-    font-family: 'PT Sans Caption';
-    max-width: 295px; }
-  #step2 .qtDetails a {
-    color: #b6c930; }
+#step2 .qtDetails p {
+  line-height: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #fff;
+  font-family: 'PT Sans Caption';
+  max-width: 295px; }
+#step2 .qtDetails a {
+  color: #b6c930; }
 #step2 .printOut {
   text-align: center; }
   #step2 .printOut p {

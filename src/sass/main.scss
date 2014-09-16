@@ -456,7 +456,7 @@ h1{
   h1 {
     padding-top: 100px;
     color: #fff;
-    font-family: "Proxima Nova";
+    font-family: 'Proxima Nova Rg';
     font-size: 50px;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -537,12 +537,12 @@ h1{
     width: 220px;
     height: 210px;
     background: #fff;
+    border-radius: 3px;
     canvas {
       padding: 17px 19px;
     }
   }
   .qtDetails {
-    opacity: 0.65;
     p {
       line-height: 20px;
       margin-top: 40px;
