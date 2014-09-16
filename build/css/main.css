@@ -955,8 +955,6 @@ label[for="message-email"] {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto; }
-  a:hover {
-    background-color: transparent !important; }
   .navbar {
     height: 90px !important; }
   .navbar-nav {
@@ -992,9 +990,11 @@ label[for="message-email"] {
   .qrSupport {
     position: relative;
     z-index: 8888; }
+  .support a {
+    line-height: 20px; }
   .bottomLine {
     overflow: visible;
-    height: 100px; }
+    height: 120px; }
   .contactUs {
     padding: 19px 0px 0 0px; }
   .modal-footer button {
