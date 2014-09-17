@@ -70,60 +70,60 @@ $(document).ready(function(data) {
         });
 
 
-        //$('#submit').click(function () {
-        //    var pincode
-        //    if ($('#id_pincode').val() != "") {
-        //        pincode = hex_md5($('#id_pincode').val())
-        //    };
-        //    var amount = $('#id_amount').val() * 1000
-        //    $.post('http://' + location.host + '/payment/', {pincode: pincode, amount: $('#id_amount').val(), donate: $('#id_donate').prop('checked')}, function (data) {
-        //        $("#payment-status").html('')
-        //        $('#payment_address').html('')
-        //        $('#qr_code').html('')
-        //        if ($("#CountDownTimer").html() != '') {
-        //            $("#CountDownTimer").TimeCircles().destroy();
-        //        }
-        //        $('#id_amount').parent().removeClass('has-error');
-        //        $('#id_pincode').parent().removeClass('has-error');
-        //        $('#id_amount').parent().removeClass('has-success');
-        //        $('#id_pincode').parent().removeClass('has-success');
-        //        if( data.pincode_error == true && data.amount_error == true) {
-        //            $('#id_pincode').parent().addClass('has-error');
-        //            $('#id_amount').parent().addClass('has-error');
-        //        } else if(data.pincode_error == true){
-        //            $('#id_pincode').parent().addClass('has-error');
-        //            $('#id_amount').parent().addClass('has-success');
-        //        } else if( data.amount_error == true ){
-        //            $('#id_amount').parent().addClass('has-error');
-        //            $('#id_pincode').parent().addClass('has-success');
-        //        } else {
-        //            $('#id_amount').parent().addClass('has-success');
-        //            $('#id_pincode').parent().addClass('has-success');
-        //        }
-        //        $("#CountDownTimer").attr("data-timer", 60 * data.time);
-        //        if (data.address){
-        //            $('#payment_address').attr('href', 'bitcoin:' + data.address + '?amount=' + data.amount)
-        //            $('#amount-view').html(data.amount + " BTC (miner's fee included)")
-        //            $("#number-view").html("Walletnote: " + data.number)
-        //            $("#payment-address").html('<p>Scan this QR-code with your mobile wallet or <a  href="' + 'bitcoin:' + data.address + '?amount=' + data.amount + '">click here</a> to use your desctop wallet</p>')
-        //            $("#CountDownTimer").TimeCircles({ time: { Days: { show: false },
-        //                Hours: { show: false }, Minutes: { show: true },
-        //                Seconds: {color: "#3a87ad"} },
-        //                bg_width: 0.3, fg_width: 0.03,
-        //                count_past_zero: false});
-        //            $("#qr_code").qrcode({
-        //                render: 'canvas',
-        //                size: 150,
-        //                text: 'bitcoin:' + data.address + '?amount=' + data.amount
-        //            });
-        //            $("#pin").html("PIN: " + $('#id_pincode').val())
-        //            generateWalletnote(amount.toString(), data.number, $('#id_pincode').val());
-        //            $('#step1').remove();
-        //            $("#step2").show();
-        //            recive();
-        //        }
-        //    }, 'json');
-        //})
+        $('#submit').click(function () {
+            var pincode
+            if ($('#id_pincode').val() != "") {
+                pincode = hex_md5($('#id_pincode').val())
+            };
+            var amount = $('#id_amount').val() * 1000
+            $.post('http://' + location.host + '/payment/', {pincode: pincode, amount: $('#id_amount').val(), donate: $('#id_donate').prop('checked')}, function (data) {
+                $("#payment-status").html('')
+                $('#payment_address').html('')
+                $('#qr_code').html('')
+                if ($("#CountDownTimer").html() != '') {
+                    $("#CountDownTimer").TimeCircles().destroy();
+                }
+                $('#id_amount').parent().removeClass('has-error');
+                $('#id_pincode').parent().removeClass('has-error');
+                $('#id_amount').parent().removeClass('has-success');
+                $('#id_pincode').parent().removeClass('has-success');
+                if( data.pincode_error == true && data.amount_error == true) {
+                    $('#id_pincode').parent().addClass('has-error');
+                    $('#id_amount').parent().addClass('has-error');
+                } else if(data.pincode_error == true){
+                    $('#id_pincode').parent().addClass('has-error');
+                    $('#id_amount').parent().addClass('has-success');
+                } else if( data.amount_error == true ){
+                    $('#id_amount').parent().addClass('has-error');
+                    $('#id_pincode').parent().addClass('has-success');
+                } else {
+                    $('#id_amount').parent().addClass('has-success');
+                    $('#id_pincode').parent().addClass('has-success');
+                }
+                $("#CountDownTimer").attr("data-timer", 60 * data.time);
+                if (data.address){
+                    $('#payment_address').attr('href', 'bitcoin:' + data.address + '?amount=' + data.amount)
+                    $('#amount-view').html(data.amount + " BTC (miner's fee included)")
+                    $("#number-view").html("Walletnote: " + data.number)
+                    $("#payment-address").html('<p>Scan this QR-code with your mobile wallet or <a  href="' + 'bitcoin:' + data.address + '?amount=' + data.amount + '">click here</a> to use your desctop wallet</p>')
+                    $("#CountDownTimer").TimeCircles({ time: { Days: { show: false },
+                        Hours: { show: false }, Minutes: { show: true },
+                        Seconds: {color: "#3a87ad"} },
+                        bg_width: 0.3, fg_width: 0.03,
+                        count_past_zero: false});
+                    $("#qr_code").qrcode({
+                        render: 'canvas',
+                        size: 150,
+                        text: 'bitcoin:' + data.address + '?amount=' + data.amount
+                    });
+                    $("#pin").html("PIN: " + $('#id_pincode').val())
+                    generateWalletnote(amount.toString(), data.number, $('#id_pincode').val());
+                    $('#step1').remove();
+                    $("#step2").show();
+                    recive();
+                }
+            }, 'json');
+        })
 
     function recive () {
         $.get('http://' + location.host + '/recive/', function (data) {

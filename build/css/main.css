@@ -849,13 +849,19 @@ h1 {
   position: absolute;
   top: 300px;
   right: 10px; }
-  .stepDots .step1-dot, .stepDots .step2-dot {
+  .stepDots .dot-icon {
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
     width: 10px;
     height: 10px;
-    background: url('../img/step.png');
-    margin-bottom: 10px; }
-  .stepDots .active-dot {
-    background: url('../img/step_active.png'); }
+    background-color: #fff; }
+  .stepDots .dot-icon.dot-inactive {
+    border-radius: 10px/10px;
+    border: solid 2px #B6C930;
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 0, 0, 0); }
 
 /*pay off */
 #id_status {
@@ -949,6 +955,9 @@ label[for="message-email"] {
     text-transform: uppercase; }
     .modal-footer button:hover {
       color: #333; }
+
+.tooltip {
+  text-align: center; }
 
 @media (max-width: 767px) {
   .container {

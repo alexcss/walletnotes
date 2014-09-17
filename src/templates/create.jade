@@ -51,8 +51,11 @@ html(lang="en")
             #step1.steps(hidden="")
                 .container
                     .stepDots
-                        div.step1-dot.active-dot
-                        div.step2-dot
+                        div
+                            i.dot-icon
+                                i
+                        div
+                            i.dot-icon.dot-inactive
                     .col-xs-12
                         h1 step 1
                     .col-xs-12
@@ -70,9 +73,7 @@ html(lang="en")
                                 option(value="0.2") 200 mBTC
                                 option(value="0.5") 500 mBTC
                         .col-xs-12.col-sm-3
-                            input#id_pincode.form-control(type="text", name="pincode", title="8 or more any digits or letters.\
-                      <br/> 4 different symbols at latest.\
-                      <br/>By default PIN will be as following.", rel="tooltip", data-html="true", data-placement="bottom", placeholder="0000 0000")
+                            input#id_pincode.form-control(type="text", name="pincode", title=" 8 or more any digits or letters.\ <br/> 4 different symbols at latest.\ <br/>By default PIN will be as following.", rel="tooltip", data-html="true", data-placement="bottom", placeholder="0000 0000")
                     .col-xs-12.col-sm-6.col-sm-offset-3
                             p.donate
                                 input#id_donate(type="checkbox", name="donate")
@@ -83,8 +84,11 @@ html(lang="en")
             #step2.steps(hidden="")
                 .container
                     .stepDots
-                        div.step1-dot
-                        div.step2-dot.active-dot
+                        div
+                            i.dot-icon.dot-inactive
+                                i
+                        div
+                            i.dot-icon
                     .col-xs-12
                         .row
                             h1 Walletnote details
