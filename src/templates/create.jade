@@ -62,7 +62,7 @@ html(lang="en")
                         div.greenLine
                         h4 Choose denomination and enter PIN (or leave as default):
                     .col-xs-12.col-sm-3.col-sm-offset-3
-                            select#id_amount.form-control(name="amount")
+                            select#id_amount.form-control.pull-right(name="amount")
                                 option(value="0.001") 1 mBTC
                                 option(value="0.002") 2 mBTC
                                 option(value="0.005") 5 mBTC
@@ -80,7 +80,6 @@ html(lang="en")
                                 label(for="id_donate") Support the project (add 0.5% donation.)
                     .col-xs-12.col-sm-6.col-sm-offset-3(style="text-align: center;")
                             input#submit.btn(type="submit", value="Submit")
-            .clearfix
             #step2.steps(hidden="")
                 .container
                     .stepDots

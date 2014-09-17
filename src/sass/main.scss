@@ -411,9 +411,8 @@ h1{
 }
 
 .panels{
-  padding-top: 110px;
+  padding-top: 100px;
   text-align: center;
-
   font-family: 'PT Sans Caption';
   line-height: 20px;
 
@@ -449,8 +448,7 @@ h1{
     width: 80px;
     height: 2px;
     background-color: #b5c92f;
-    margin: 0 auto;
-    margin-top: 40px;
+    margin: 32px auto 0;
   }
 
   h1 {
@@ -559,10 +557,10 @@ h1{
     text-align: center;
     p {
       line-height: 20px;
-      margin-top: 40px;
+      margin-top: 31px;
       margin-bottom: 20px;
-      font-size: 14px;
-      color: #fff;
+      font-size: 12px;
+      color: #FFF;
       font-family: 'PT Sans Caption';
     }
   }
@@ -571,7 +569,7 @@ h1{
 .stepDots{
   position: absolute;
   top: 300px;
-  right: 10px;
+  right: -6px;
 
   .dot-icon {
     position: relative;
@@ -580,6 +578,7 @@ h1{
     width: 10px;
     height: 10px;
     background-color: #fff;
+    margin-bottom: 4px;
   }
   .dot-icon.dot-inactive {
     border-radius: 10px/10px;
@@ -721,7 +720,7 @@ label[for="message-email"]{
 //    top: auto;
 //  }
   .navbar {
-    height: 90px !important;
+    height: 74px !important;
   }
   .navbar-nav {
     background: #fff;
@@ -732,6 +731,9 @@ label[for="message-email"]{
     padding: 0px 0 0 15px;
     font-size: 18px;
     line-height: 20px;
+  }
+  .navbar-collapse {
+    margin-top: 0;
   }
   .navbar-toggle {
     margin-top: 10px;
@@ -789,7 +791,7 @@ label[for="message-email"]{
     width: 200px;
   }
   .panels {
-    padding-top: 90px;
+    padding-top: 74px;
   }
   .attention-panel, .service-info-panel {
     height: auto;
@@ -857,6 +859,9 @@ label[for="message-email"]{
   h1 {
     font-size: 52px;
   }
+  .navbar-collapse {
+    margin-top: 20px;
+  }
   .navbar-collapse.collapse {
     float: right;
   }
@@ -876,6 +881,9 @@ label[for="message-email"]{
         padding: 6px 6px 6px 6px;
       }
     }
+  }
+  #logo img {
+    margin-top: -10px;
   }
   #message {
     margin-top: 100px;
@@ -975,6 +983,17 @@ label[for="message-email"]{
   .walletDetails {
     background: url('../img/time.png') no-repeat;
     background-position: 100% 30px;
+  }
+  #step1 .form-control{
+//    float: right;
+  }
+  #step1 .form-control {
+    width: 150px;
+  }
+  #step2{
+    h3, h4, h5{
+      padding-left: 30px;
+    }
   }
 }
 
