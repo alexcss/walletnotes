@@ -41,8 +41,10 @@ $(document).ready(function(data) {
         $('body').fadeIn(500);
 
         $("#conditions" ).click(function() {
-            $('.panels').fadeOut(500);
-            $("#step1").fadeIn(500);
+            $('.panels').slideUp(500,
+                function(){
+                    $("#step1").slideDown(500)
+                });
         });
 
         $("#submit" ).click(function() {
@@ -55,14 +57,16 @@ $(document).ready(function(data) {
         });
 
         $("#submit" ).click(function() {
-            $('#step1').fadeOut(500);
-            $("#step2").fadeIn(500);
+            $('#step1').slideUp(500,
+                function(){
+                    $("#step2").slideDown(500)
+                });
         });
 
 
 
         $("#id_amount").change(function () {
-            $.get('http://' + location.host + '/calc-donate/?amount=' + $(this).val(), function (data) {
+            $.get('http://walletnotes.org/calc-donate/?amount=' + $(this).val(), function (data) {
                 console.log(data.donate)
                 donate = data.donate * 1000
                 $("#id_donate").next("label").html("Support the project (add " + donate.toString() + " m฿ donation.)")
@@ -270,14 +274,12 @@ $(document).ready(function(data) {
 
     // tolltip + pin
     $("#id_pincode").val(str_rand(8));
-    $.get('http://' + location.host + '/calc-donate/?amount=' + $("#id_amount").val(), function (data) {
+    $.get('http://walletnotes.org/calc-donate/?amount=' + $("#id_amount").val(), function (data) {
         console.log(data.donate)
         donate = data.donate * 1000
         $("#id_donate").next("label").html("Support the project (add " + donate.toString() + " m฿ donation to funds.)")
     });
+
     $("[rel='tooltip']").tooltip();
-
-
-
-
+    
 });

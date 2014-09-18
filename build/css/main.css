@@ -405,16 +405,6 @@ body {
   min-width: 320px;
   overflow-x: hidden; }
 
-.wrapper {
-  position: relative;
-  width: 100%;
-  z-index: 1000;
-  top: 0;
-  min-height: 100%;
-  height: auto !important;
-  /*margin: 0 auto -50px;*/
-  margin: 0 auto; }
-
 a, button, .bitlink {
   -webkit-transition: color 350ms, background 350ms, border 350ms;
           transition: color 350ms, background 350ms, border 350ms; }
@@ -423,6 +413,10 @@ a:hover, a:focus {
   text-decoration: none;
   outline: none;
   border: 0; }
+
+.green {
+  color: #b6c930;
+  word-break: break-all; }
 
 /*------------Navbar------------*/
 .navbar {
@@ -466,9 +460,6 @@ li.active {
   line-height: 35px;
   color: #333; }
 
-/*.push {
-height: 50px;
-}*/
 .bottomLine {
   background-color: #0B1A37;
   height: auto;
@@ -709,14 +700,10 @@ h1 {
   position: static; }
 
 /* create */
-#create {
-  min-height: 100%;
-  margin: 0 auto -40px;
-  /* the bottom margin is the negative value of the footer's height */ }
-
 .create-push, .bottomLine-create {
   height: 40px;
-  /* '.push' must be the same height as 'footer' */ }
+  /* '.push' must be the same height as 'footer' */
+  clear: both; }
 
 .panels {
   padding-top: 100px;
@@ -744,40 +731,33 @@ h1 {
     text-transform: uppercase; }
 
 .steps {
-  padding-top: 100px;
+  padding-top: 20px;
   background-image: url('../img/steps.jpg');
-  height: 100vh;
-  min-height: 990px;
   background-position: 50% 0;
-  background-size: cover; }
+  background-size: cover;
+  padding-bottom: 100px; }
+  .steps .container {
+    position: relative; }
   .steps .greenLine {
     width: 80px;
     height: 2px;
     background-color: #b5c92f;
-    margin: 32px auto 0; }
+    margin: 32px auto 40px; }
   .steps h1 {
     padding-top: 100px;
     color: #fff;
     font-family: 'Proxima Nova Rg';
-    font-size: 50px;
+    font-size: 30px;
     margin-bottom: 0;
     padding-bottom: 0; }
   .steps h4 {
-    margin-top: 40px;
+    margin-top: 20px;
     color: #fff;
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px; }
-
-#step1, #step2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0; }
-  #step1 .container, #step2 .container {
-    position: relative; }
 
 #step1 .form-control {
   border-radius: 0 !important;
@@ -797,8 +777,6 @@ h1 {
   text-transform: uppercase;
   margin-top: 20px; }
 
-#step2 .greenLine {
-  margin-bottom: 40px; }
 #step2 h5 {
   color: #fff;
   font-family: 'PT Sans Caption';
@@ -994,10 +972,6 @@ label[for="message-email"] {
     float: right; }
   #soulful img {
     margin-left: -15px; }
-  .wrapper {
-    margin: 0 auto -40px; }
-  #create {
-    height: 990px !important; }
   .qrSupport {
     position: relative;
     z-index: 8888; }
@@ -1018,33 +992,16 @@ label[for="message-email"] {
   .conditions .btn {
     width: 280px;
     margin-bottom: 40px; }
-  .steps {
-    height: 990px;
-    overflow: hidden; }
-    .steps h1 {
-      font-size: 38px;
-      padding-top: 10px; }
-  .stepDots {
-    display: none; }
   .btn {
     width: 240px;
     margin: 0 auto;
     display: block; }
-  #step2 h5 {
-    word-wrap: break-word; }
-  #step2 .walletDetails h3 {
-    padding-top: 10px; }
-  #step2 #qr_code {
-    width: 200px;
-    height: 200px;
-    background: #FFF;
-    margin: 0 auto;
-    display: block;
-    margin-top: 10px; }
-    #step2 #qr_code canvas {
-      padding: 10px; }
+  .stepDots {
+    display: none; }
   .modal-body img {
-    width: 100%; } }
+    width: 100%; }
+  .wrapper {
+    margin: 0 auto -40px; } }
 
 @media (min-width: 768px) {
   .container {
@@ -1152,10 +1109,25 @@ label[for="message-email"] {
   .walletDetails {
     background: url('../img/time.png') no-repeat;
     background-position: 100% 30px; }
+  .steps {
+    padding-top: 100px;
+    height: 100vh; }
+    .steps h1 {
+      font-size: 50px; }
+    .steps h4 {
+      font-size: 20px; }
   #step1 .form-control {
     width: 150px; }
   #step2 h3, #step2 h4, #step2 h5 {
-    padding-left: 30px; } }
+    padding-left: 30px; }
+  .wrapper {
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    min-height: 100%;
+    height: auto !important;
+    margin: 0 auto -40px; } }
 
 @media (min-width: 992px) {
   .container {
