@@ -34,11 +34,13 @@
             This is only the prototype of the service<br>The security is our highest priority, but we are still about to improve it. Do not use the service<br>for signifiacant amount of bitcoins! All actions here are at your own risk.
           </p>
         </div>
-        <div class="service-info-panel">
-          <p>
-              <b>Service charges:</b> <br>
-            0.1 mBTC - miner"s fee for future redeem transaction, will apply when creating walletnote;<br>0.1% - service fee, will apply when redeeming (changing PIN instead is free)
-          </p>
+        <div>
+          <div class="service-info-panel">
+            <p>
+                <b>Service charges:</b> <br>
+              0.1 mBTC - miner"s fee for future redeem transaction, will apply when creating walletnote;<br>0.1% - service fee, will apply when redeeming (changing PIN instead is free)
+            </p>
+          </div>
         </div>
         <div class="container">
           <div class="row">
@@ -174,16 +176,20 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" data-dismiss="modal" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title">Print walletnote!</h4>
+          <h4 class="modal-title">Print your walletnote!</h4>
         </div>
-        <div class="modal-body">
-          <img src="#" alt="" id="walletnote-img" width="570">
-          <div id="serial-number-qr"></div>
-          <div id="serial-number"></div>
-              <button class="btn" id="walletnote-download">Download</button>
-          <div id="pin-print"></div>
+        <div class="modal-body"><img src="img/walletnotes/100mB.jpg" alt="" id="walletnote-img" width="570">
+          <!--|<div id="serial-number-qr"></div>-->
+          <!--|<div id="serial-number"></div>-->
+          <!--|    <button class="btn" id="walletnote-download">Download</button>-->
+          <!--|<div id="pin-print"></div>-->
+          <p><b>PIN:</b><span id="pin-print">38803133</span></p>
         </div>
-        <div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default">PRINT</button>
+          <button type="button" class="btn btn-default btn-pdf">PDF</button>
+          <button type="button" class="btn btn-default">E-MAIL <input type="text" class="inputEmail"></button>
+        </div>
       </div>
     </div>
   </div>

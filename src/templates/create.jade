@@ -38,7 +38,7 @@ html(lang="en")
                         | The security is our highest priority, but we are still about to improve it. Do not use the service
                         br
                         | for signifiacant amount of bitcoins! All actions here are at your own risk.
-                -//.row
+                div
                     .service-info-panel
                         p   <b>Service charges:</b> <br>
                             | 0.1 mBTC - miner"s fee for future redeem transaction, will apply when creating walletnote;
@@ -154,17 +154,22 @@ html(lang="en")
             .modal-content
                 .modal-header
                     button(type="button" class="close" data-dismiss="modal") <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                    h4.modal-title Print walletnote!
-                .modal-body.
-                    <img src="#" alt="" id="walletnote-img" width="570">
-                    <div id="serial-number-qr"></div>
-                    <div id="serial-number"></div>
-                        <button class="btn" id="walletnote-download">Download</button>
-                    <div id="pin-print"></div>
+                    h4.modal-title Print your walletnote!
+                .modal-body
+                    //- <img src="#" alt="" id="walletnote-img" width="570">
+                    |<img src="img/walletnotes/100mB.jpg" alt="" id="walletnote-img" width="570">
+                    //|<div id="serial-number-qr"></div>
+                    //|<div id="serial-number"></div>
+                    //|    <button class="btn" id="walletnote-download">Download</button>
+                    //|<div id="pin-print"></div>
+                    p
+                        b PIN:
+                        span#pin-print 38803133
+
                 .modal-footer
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
-
+                    <button type="button" class="btn btn-default">PRINT</button>
+                    <button type="button" class="btn btn-default btn-pdf">PDF</button>
+                    <button type="button" class="btn btn-default">E-MAIL <input type="text" class="inputEmail"></button>
     //script(src="//code.jquery.com/jquery-1.11.1.min.js")
     script(src="js/jquery-1.11.1.min.js")
     script(src="js/TweenMax.min.js")

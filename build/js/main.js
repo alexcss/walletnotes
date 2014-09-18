@@ -41,9 +41,9 @@ $(document).ready(function(data) {
         $('body').fadeIn(500);
 
         $("#conditions" ).click(function() {
-            $('.panels').slideUp(500,
+            $('.panels').fadeOut(500,
                 function(){
-                    $("#step1").slideDown(500)
+                    $("#step1").fadeIn(500)
                 });
         });
 
@@ -57,9 +57,9 @@ $(document).ready(function(data) {
         });
 
         $("#submit" ).click(function() {
-            $('#step1').slideUp(500,
+            $('#step1').fadeOut(500,
                 function(){
-                    $("#step2").slideDown(500)
+                    $("#step2").fadeIn(500)
                 });
         });
 
@@ -281,5 +281,5 @@ $(document).ready(function(data) {
     });
 
     $("[rel='tooltip']").tooltip();
-    
+
 });
