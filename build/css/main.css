@@ -838,6 +838,8 @@ h1 {
   max-width: 295px; }
 #step2 .qtDetails a {
   color: #b6c930; }
+#step2 .qtDetails a:hover {
+  color: #d7ee39; }
 #step2 .printOut {
   text-align: center; }
   #step2 .printOut p {
@@ -934,14 +936,19 @@ h1 {
             transition: all 500ms;
     display: block;
     margin: 0 auto;
-    z-index: 111; }
+    z-index: 111;
+    background-image: url('../img/enter.png');
+    background-repeat: no-repeat;
+    background-position: 90% 50%; }
   .modalFoot-btn .btn {
     position: relative;
     max-width: 220px;
     margin: 0 auto;
     z-index: 222; }
-  .modalFoot-btn .btn-pdf {
+  .modalFoot-btn .btn-pdf, .modalFoot-btn.inputEmail .btn {
     background-color: #cfcfcf; }
+  .modalFoot-btn .btn-pdf:hover, .modalFoot-btn.inputEmail .btn:hover {
+    background-color: #a0a0a0; }
 
 #id_status {
   color: #b6c930; }
@@ -1058,7 +1065,7 @@ label[for="message-email"] {
   .trackRedeem a {
     color: #B6C930; }
   .trackRedeem a:hover {
-    color: #CADF37; }
+    color: #d7ee39; }
 
 .serialNum {
   text-align: center; }
