@@ -115,7 +115,7 @@
           </div>
           <div class="col-xs-12 col-sm-5 qr">
             <div id="qr_code"></div>
-            <div class="qtDetails">
+            <div id="payment-address" class="qtDetails">
               <p>
                 Scan this QR-code with your mobile wallet
                 or<a href="#"> click here</a> to use your desctop wallet
@@ -186,9 +186,12 @@
           <p><b>PIN:</b><span id="pin-print">38803133</span></p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default">PRINT</button>
-          <button type="button" class="btn btn-default btn-pdf">PDF</button>
-          <button type="button" class="btn btn-default">E-MAIL <input type="text" class="inputEmail"></button>
+          <div class="modalFoot-btn"><button type="button" class="btn btn-default">PRINT</button></div>
+          <div class="modalFoot-btn"><button type="button" class="btn btn-default btn-pdf">PDF</button></div>
+          <div class="modalFoot-btn inputEmail">
+            <button type="button" class="btn btn-default">E-MAIL</button>
+            <input type="text" class="">
+          </div>
         </div>
       </div>
     </div>

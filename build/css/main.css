@@ -405,7 +405,7 @@ body {
   min-width: 320px;
   overflow-x: hidden; }
 
-a, button, .bitlink {
+a, button, .btn, .bitlink {
   -webkit-transition: color 350ms, background 350ms, border 350ms;
           transition: color 350ms, background 350ms, border 350ms; }
 
@@ -474,20 +474,6 @@ li.active {
     margin: 0 auto;
     font-size: 14px; }
 
-span.qrcodeicon span {
-  position: absolute;
-  display: block;
-  top: 0px;
-  right: 6px;
-  width: 18px;
-  height: 18px;
-  background-image: url('../img/qrcode.png');
-  cursor: pointer;
-  z-index: 1; }
-
-span.qrcodeicon {
-  position: relative; }
-
 .form-control {
   display: inherit; }
 
@@ -515,6 +501,39 @@ h1 {
   margin-top: 0;
   margin-bottom: 40px;
   text-transform: uppercase; }
+
+/* reedem */
+.reedemInput {
+  text-align: center;
+  width: 340px;
+  margin: 0 auto;
+  position: relative; }
+  .reedemInput input {
+    padding-left: 10px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px; }
+
+.qrcodeicon {
+  position: absolute;
+  display: block;
+  top: 5px;
+  right: 7px;
+  width: 30px;
+  height: 30px;
+  background-image: url('../img/qrcode.png');
+  cursor: pointer;
+  z-index: 1; }
+
+#smallQR {
+  width: 340px;
+  height: 40px;
+  background-color: #fff; }
+
+.reedemDonate {
+  text-align: center; }
+  .reedemDonate p {
+    color: #FFF; }
 
 /*footer */
 .copyright {
@@ -767,15 +786,23 @@ h1 {
   -webkit-border-radius: 0px;
   background: #fff url('../img/dropArrow.png') no-repeat;
   background-position: 97% 54%; }
-#step1 .donate {
-  text-align: center; }
-  #step1 .donate label {
-    color: #fff; }
 #step1 .btn {
   width: 180px;
   height: 50px;
   text-transform: uppercase;
   margin-top: 20px; }
+
+.donate {
+  text-align: center; }
+  .donate label {
+    color: #fff; }
+  .donate .notice {
+    display: block;
+    color: #b4b4b4;
+    line-height: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 14px; }
 
 #step2 h5 {
   color: #fff;
@@ -874,9 +901,20 @@ h1 {
     margin-top: 14px;
     margin-left: 4px; }
 #print-walletnote .modal-footer {
-  margin: 6px 0 25px 0; }
-  #print-walletnote .modal-footer .inputEmail {
-    display: none;
+  margin: 6px 0 25px 0;
+  background: #FFF;
+  border-radius: 6px;
+  box-sizing: border-box; }
+
+.modalFoot-btn {
+  width: 33.33333%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: inline-block;
+  float: left;
+  position: relative; }
+  .modalFoot-btn.inputEmail input {
     width: 220px;
     height: 50px;
     background-color: #fff;
@@ -890,13 +928,19 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
-    border: 2px solid #cfcfcf; }
-  #print-walletnote .modal-footer .btn {
+    right: 0;
+    border: 2px solid #cfcfcf;
+    -webkit-transition: all 500ms;
+            transition: all 500ms;
+    display: block;
+    margin: 0 auto;
+    z-index: 111; }
+  .modalFoot-btn .btn {
     position: relative;
-    max-width: 220px; }
-  #print-walletnote .modal-footer .btn:hover input {
-    display: block; }
-  #print-walletnote .modal-footer .btn-pdf {
+    max-width: 220px;
+    margin: 0 auto;
+    z-index: 222; }
+  .modalFoot-btn .btn-pdf {
     background-color: #cfcfcf; }
 
 #id_status {
@@ -994,6 +1038,64 @@ label[for="message-email"] {
 .tooltip {
   text-align: center; }
 
+.orangeText {
+  text-align: center;
+  color: #ff9b00;
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bold; }
+
+.steps .orangeText {
+  max-width: 370px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px 20px 30px 20px; }
+
+.trackRedeem {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px; }
+  .trackRedeem a {
+    color: #B6C930; }
+  .trackRedeem a:hover {
+    color: #CADF37; }
+
+.serialNum {
+  text-align: center; }
+  .serialNum .serialInput {
+    display: inline-block;
+    text-align: center;
+    width: 340px;
+    margin: 0 auto;
+    position: relative; }
+    .serialNum .serialInput #reedemSerial {
+      max-width: 291px;
+      padding-left: 10px;
+      width: 100%;
+      height: 40px;
+      margin-bottom: 20px; }
+    .serialNum .serialInput .qrcodeicon {
+      right: 29px; }
+  .serialNum .btn {
+    width: 121px;
+    height: 40px;
+    background-color: #b5c92f;
+    top: -1px;
+    position: relative;
+    left: 0;
+    background-image: url('../img/enter.png');
+    background-repeat: no-repeat;
+    background-position: 50%; }
+
+.serialButtons .btn {
+  max-width: 230px;
+  margin: 0 5px; }
+
+.changePinBtn .btn {
+  max-width: 293px;
+  margin: 0 auto;
+  width: 293px; }
+
 @media (max-width: 767px) {
   .container {
     max-width: 100%;
@@ -1066,7 +1168,17 @@ label[for="message-email"] {
   #print-walletnote .modal-footer .btn, #print-walletnote .modal-footer .btn + .btn {
     margin-bottom: 10px;
     margin-left: auto;
-    margin-right: auto; } }
+    margin-right: auto; }
+  .reedemInput {
+    width: 250px; }
+  .modal-content {
+    height: auto; }
+  .serialNum .serialInput {
+    width: 293px; }
+  .serialInput .qrcodeicon {
+    right: 9px; }
+  .serialButtons .btn {
+    margin: 0 auto 10px; } }
 
 @media (min-width: 768px) {
   .container {

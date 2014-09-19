@@ -282,4 +282,34 @@ $(document).ready(function(data) {
 
     $("[rel='tooltip']").tooltip();
 
+    // email hover with inpur show/hide
+    var mailBl = $('.inputEmail');
+    var emailBtn= $('.inputEmail .btn');
+    var emailInput = $('.inputEmail > input');
+    var emailInputInFocus = false;
+
+    //$(mailBl).hover(
+    $(mailBl).mouseover(
+        function () {
+            if (!emailInputInFocus) {
+                emailInputInFocus = true;
+                //console.log(emailInputInFocus);
+                $(emailBtn).fadeTo("slow", 0, function () {
+                    $(this).css('top', '-60px');
+                })
+            }}
+        //},
+        //function () {
+        //    ($(emailInput).focus());
+        //}
+    );
+
+    $(emailInput).on('focusout', function () {
+        emailInputInFocus = false;
+        $(emailBtn).css('top', '0px');
+        $(emailBtn).fadeTo("slow" , 1);
+        //console.log(emailInputInFocus);
+    });
+
+
 });

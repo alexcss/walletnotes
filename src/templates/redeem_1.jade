@@ -30,9 +30,9 @@ html(lang="en")
                                 a(href="create.html") CREATE
                             li.active
                                 a(href="redeem.html") REDEEM
-            #step3.steps    //-(hidden="")
+            .steps    //-(hidden="")
                 .container
-                    .stepDots
+                    //-.stepDots
                         div
                             i.dot-icon.dot-inactive
                                 i
@@ -47,21 +47,14 @@ html(lang="en")
                                 i
                     .col-xs-12
                         .row
-                            h1 REDEEM TO ADDRESS
+                            h1 CHANGE PIN
                     .col-xs-12
                         div.greenLine
                     .col-xs-12
                         .reedemInput
-                            input#reedemAddres(type="text", placeholder="Bitcoin address to redeem")
-                            span.qrcodeicon
-                            input#reedemPin(type="text", placeholder="PIN")
-                        .reedemDonate
-                            p.donate
-                                input#id_donate(type="checkbox", name="donate")
-                                label(for="id_donate") Support the project (add 0.5% donation.)
-                                span.notice.
-                                    Standard redeem service fee 0.1% = 0.005 m฿. <br>
-                                    You will receive 4.995 m฿ to your address
+                            input#reedemAddres(type="text", placeholder="Change Pin")
+                            input#reedemPin(type="text", placeholder="New Pin")
+                        div.text-center
                             input#submit.btn(type="submit", value="Submit")
 
         //-#step2.steps(hidden="")

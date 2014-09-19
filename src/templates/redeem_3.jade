@@ -30,7 +30,7 @@ html(lang="en")
                                 a(href="create.html") CREATE
                             li.active
                                 a(href="redeem.html") REDEEM
-            #step3.steps    //-(hidden="")
+            .steps    //-(hidden="")
                 .container
                     .stepDots
                         div
@@ -47,22 +47,22 @@ html(lang="en")
                                 i
                     .col-xs-12
                         .row
-                            h1 REDEEM TO ADDRESS
+                            h1 WALLETNOTE S/N
                     .col-xs-12
                         div.greenLine
+                    .col-xs-12.serialNum
+                            .serialInput
+                                input#reedemSerial(type="text", placeholder="Bitcoin address to redeem")
+                                span.qrcodeicon
+                            a#submit.btn(href="#")
                     .col-xs-12
-                        .reedemInput
-                            input#reedemAddres(type="text", placeholder="Bitcoin address to redeem")
-                            span.qrcodeicon
-                            input#reedemPin(type="text", placeholder="PIN")
-                        .reedemDonate
-                            p.donate
-                                input#id_donate(type="checkbox", name="donate")
-                                label(for="id_donate") Support the project (add 0.5% donation.)
-                                span.notice.
-                                    Standard redeem service fee 0.1% = 0.005 m฿. <br>
-                                    You will receive 4.995 m฿ to your address
-                            input#submit.btn(type="submit", value="Submit")
+                        p.orangeText
+                            | Oops! It’s not exist! :-(
+                        //-div.trackRedeem
+                            | You <a href="#" class="green">can track redeem transaction here</a>
+                    //-.col-xs-12.text-center
+                        input#submit.btn(type="submit", value="CREATE NEW")
+
 
         //-#step2.steps(hidden="")
                 .container
