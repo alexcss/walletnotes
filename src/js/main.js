@@ -288,8 +288,7 @@ $(document).ready(function(data) {
     var emailInput = $('.inputEmail > input');
     var emailInputInFocus = false;
 
-    //$(mailBl).hover(
-    $(mailBl).mouseover(
+    $(mailBl).hover(
         function () {
             if (!emailInputInFocus) {
                 emailInputInFocus = true;
@@ -297,11 +296,11 @@ $(document).ready(function(data) {
                 $(emailBtn).fadeTo("slow", 0, function () {
                     $(this).css('top', '-60px');
                 })
-            }}
-        //},
-        //function () {
-        //    ($(emailInput).focus());
-        //}
+            }
+        },
+        function () {
+            ($(emailInput).focus());
+        }
     );
 
     $(emailInput).on('focusout', function () {
