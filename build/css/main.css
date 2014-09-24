@@ -863,6 +863,8 @@ h1 {
     height: 10px;
     background-color: #fff;
     margin-bottom: 4px; }
+  .stepDots .dot-icon.orange {
+    background-color: #ff9c00; }
   .stepDots .dot-icon.dot-inactive {
     border-radius: 10px/10px;
     border: solid 2px #B6C930;
@@ -892,12 +894,25 @@ h1 {
   color: #333; }
 #print-walletnote .modal-body {
   padding-top: 0; }
-  #print-walletnote .modal-body img {
+  #print-walletnote .modal-body #walletnote-img {
     width: 100%;
     padding: 0 10px;
     display: block; }
-  #print-walletnote .modal-body p {
-    margin-left: 23px; }
+  #print-walletnote .modal-body #serial-number-qr {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    color: #FFF; }
+  #print-walletnote .modal-body #serial-number {
+    position: absolute;
+    bottom: 10%;
+    right: 6%;
+    max-width: 21%; }
   #print-walletnote .modal-body #pin-print {
     display: inline-block;
     margin-top: 14px;
@@ -907,6 +922,8 @@ h1 {
   background: #FFF;
   border-radius: 6px;
   box-sizing: border-box; }
+#print-walletnote #walltenote-pin {
+  margin-left: 23px; }
 
 .modalFoot-btn {
   width: 33.33333%;
@@ -927,7 +944,6 @@ h1 {
     line-height: 35px;
     color: #333;
     box-sizing: border-box;
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -1075,7 +1091,7 @@ label[for="message-email"] {
     width: 340px;
     margin: 0 auto;
     position: relative; }
-    .serialNum .serialInput #reedemSerial {
+    .serialNum .serialInput .reedemSerial {
       max-width: 291px;
       padding-left: 10px;
       width: 100%;

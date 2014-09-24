@@ -64,6 +64,28 @@ $(document).ready(function(data) {
         });
 
 
+        // redeem page
+        $('#step3 #submit').click(function() {
+            $('#step3').fadeOut(500,
+                function(){
+                    $("#step4").fadeIn(500)
+                });
+        });
+
+        $('#step4 #submitPin').click(function() {
+            $('#step4').fadeOut(500,
+                function(){
+                    $("#stepSubmitPin").fadeIn(500)
+                });
+        });
+
+        $('#step4 #submitRedeem').click(function() {
+            $('#step4').fadeOut(500,
+                function(){
+                    $("#stepSubmitRedeem").fadeIn(500)
+                });
+        });
+
 
         $("#id_amount").change(function () {
             $.get('http://walletnotes.org/calc-donate/?amount=' + $(this).val(), function (data) {
@@ -309,6 +331,9 @@ $(document).ready(function(data) {
         $(emailBtn).fadeTo("slow" , 1);
         //console.log(emailInputInFocus);
     });
+
+
+
 
 
 });

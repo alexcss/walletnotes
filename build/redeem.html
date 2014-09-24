@@ -31,10 +31,75 @@
         <div class="container">
           <div class="stepDots">
             <div><i class="dot-icon dot-inactive"><i></i></i></div>
+            <div><i class="dot-icon orange"><i></i></i></div>
             <div><i class="dot-icon dot-inactive"><i></i></i></div>
-            <div><i class="dot-icon"><i></i></i></div>
             <div><i class="dot-icon dot-inactive"><i></i></i></div>
           </div>
+          <div class="col-xs-12">
+            <div class="row">
+              <h1>WALLETNOTE S/N</h1>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="greenLine"></div>
+            <h4>Enter walletnote S/N:</h4>
+          </div>
+          <div class="col-xs-12 serialNum">
+            <div class="serialInput">
+              <input id="id_number" type="text" placeholder="AAA 0000 0000 0000 0000 0000" class="reedemSerial"><span class="qrcodeicon"></span>
+            </div>
+          </div>
+          <div class="col-xs-12 text-center changePinBtn">
+            <input id="submit" type="submit" value="ENTER" class="btn">
+          </div>
+        </div>
+      </div>
+      <div id="step4" hidden="" class="steps">
+        <div class="container">
+          <div class="stepDots">
+            <div><i class="dot-icon dot-inactive"><i></i></i></div>
+            <div><i class="dot-icon orange"><i></i></i></div>
+            <div><i class="dot-icon dot-inactive"><i></i></i></div>
+            <div><i class="dot-icon dot-inactive"><i></i></i></div>
+          </div>
+          <div class="col-xs-12">
+            <div class="row">
+              <h1>WALLETNOTE S/N</h1>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="greenLine"></div>
+          </div>
+          <div class="col-xs-12 serialNum">
+            <div class="serialInput">
+              <input type="text" placeholder="AAA 0000 0000 0000 0000 0000" class="reedemSerial"><span class="qrcodeicon"></span>
+            </div><a id="submit" href="#" class="btn"></a>
+          </div>
+          <div class="col-xs-12">
+            <p class="orangeText">Super! It’s Valid! :-)</p>
+          </div>
+          <div class="col-xs-12 text-center serialButtons">
+            <input id="submitPin" type="submit" value="CHANGE PIN" class="btn">
+            <input id="submitRedeem" type="submit" value="REDEEM TO ADDRESS" class="btn">
+          </div>
+        </div>
+      </div>
+      <div id="stepSubmitRedeem" hidden="" class="steps">
+        <div class="container">
+          <!--.stepDots
+          div
+              i.dot-icon.dot-inactive
+                  i
+          div
+              i.dot-icon.dot-inactive
+                  i
+          div
+              i.dot-icon
+                  i
+          div
+              i.dot-icon.dot-inactive
+                  i
+          -->
           <div class="col-xs-12">
             <div class="row">
               <h1>REDEEM TO ADDRESS</h1>
@@ -60,6 +125,103 @@
           </div>
         </div>
       </div>
+      <div id="stepSubmitPin" hidden="" class="steps">
+        <div class="container">
+          <!--.stepDots-->
+          <!--    div-->
+          <!--        i.dot-icon.dot-inactive-->
+          <!--            i-->
+          <!--    div-->
+          <!--        i.dot-icon.dot-inactive-->
+          <!--            i-->
+          <!--    div-->
+          <!--        i.dot-icon-->
+          <!--            i-->
+          <!--    div-->
+          <!--        i.dot-icon.dot-inactive-->
+          <!--            i-->
+          <div class="col-xs-12">
+            <div class="row">
+              <h1>CHANGE PIN</h1>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="greenLine"></div>
+          </div>
+          <div class="col-xs-12">
+            <div class="reedemInput">
+              <input id="id_pincode" type="text" placeholder="Change Pin">
+              <input id="id_newpincode" type="text" placeholder="New Pin" title=" 8 or more any digits or letters. &lt;br/&gt; 4 different symbols at latest. &lt;br/&gt;By default PIN will be as following." rel="tooltip" data-html="true" data-placement="bottom">
+            </div>
+            <div class="text-center">
+              <input id="submit" type="submit" value="Submit" class="btn">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--.steps(hidden="")
+      .container
+          .stepDots
+              div
+                  i.dot-icon.dot-inactive
+                      i
+              div
+                  i.dot-icon.dot-inactive
+                      i
+              div
+                  i.dot-icon
+                      i
+              div
+                  i.dot-icon.dot-inactive
+                      i
+          .col-xs-12
+              .row
+                  h1 REDEEM TO ADDRESS
+          .col-xs-12
+              div.greenLine
+          .col-xs-12
+              p.orangeText
+                  | Well done! Walletnote was redeemed sucsessfully
+              div.trackRedeem
+                  | You <a href="#" class="green">can track redeem transaction here</a>
+          .col-xs-12.text-center
+              input#submit.btn(type="submit", value="CREATE NEW")
+      -->
+      <!--.steps    //-(hidden="")
+      .container
+          //-.stepDots
+              div
+                  i.dot-icon.dot-inactive
+                      i
+              div
+                  i.dot-icon.dot-inactive
+                      i
+              div
+                  i.dot-icon
+                      i
+              div
+                  i.dot-icon.dot-inactive
+                      i
+          .col-xs-12
+              .row
+                  h1 WALLETNOTE S/N
+          .col-xs-12
+              div.greenLine
+          .col-xs-12.serialNum
+              .serialInput
+                  input.reedemSerial(type="text", placeholder="Bitcoin address to redeem")
+                  span.qrcodeicon
+              a#submit.btn(href="#")
+          .col-xs-12
+              p.orangeText
+                  | Oops! It’s not exist! :-(
+              //-div.trackRedeem
+                  | You <a href="#" class="green">can track redeem transaction here</a>
+          //-.col-xs-12.text-center
+              input#submit.btn(type="submit", value="CREATE NEW")
+      
+      
+      -->
     </div>
   </body>
   <div class="bottomLine bottomLine-create">

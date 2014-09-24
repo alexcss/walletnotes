@@ -65,15 +65,15 @@
           </div>
           <div class="col-xs-12 col-sm-3 col-sm-offset-3">
             <select id="id_amount" name="amount" class="form-control pull-right">
-              <option value="0.001">1 mBTC</option>
-              <option value="0.002">2 mBTC</option>
-              <option value="0.005">5 mBTC</option>
-              <option value="0.01">10 mBTC</option>
-              <option value="0.02">20 mBTC</option>
-              <option value="0.05">50 mBTC</option>
-              <option selected="" value="0.1">100 mBTC</option>
-              <option value="0.2">200 mBTC</option>
-              <option value="0.5">500 mBTC</option>
+              <option value="0.001">1 m฿</option>
+              <option value="0.002">2 m฿</option>
+              <option value="0.005">5 m฿</option>
+              <option value="0.01">10 m฿</option>
+              <option value="0.02">20 m฿</option>
+              <option value="0.05">50 m฿</option>
+              <option selected="" value="0.1">100 m฿</option>
+              <option value="0.2">200 m฿</option>
+              <option value="0.5">500 m฿</option>
             </select>
           </div>
           <div class="col-xs-12 col-sm-3">
@@ -105,12 +105,12 @@
             <div class="greenLine"></div>
           </div>
           <div class="col-xs-12 col-sm-7">
-            <h5><b>Address</b>: <span class="green">1uBRJ5Rtoe4ZA3dqQJkj9U8KHVePMMs7o</span></h5>
-            <h5><b>Amount</b>: 1001 mB (miner's fee included)</h5>
+            <h5 id="amount-address"><b>Address</b>: <span class="green">1uBRJ5Rtoe4ZA3dqQJkj9U8KHVePMMs7o</span></h5>
+            <h5 id="amount-view"><b>Amount</b>: 1001 mB (miner's fee included)</h5>
             <div class="walletDetails">
               <h3>Wallet details</h3>
-              <h4><b>S/N</b>: AAA 0000 0000 0000 0000</h4>
-              <h4><b>PIN</b>: 00000000</h4>
+              <h4 id="number-view"><b>S/N</b>: AAA 0000 0000 0000 0000</h4>
+              <h4 id="pin"><b>PIN</b>: 00000000</h4>
             </div>
           </div>
           <div class="col-xs-12 col-sm-5 qr">
@@ -179,18 +179,17 @@
           <h4 class="modal-title">Print your walletnote!</h4>
         </div>
         <div class="modal-body"><img src="img/walletnotes/100mB.jpg" alt="" id="walletnote-img" width="570">
-          <!--|<div id="serial-number-qr"></div>-->
-          <!--|<div id="serial-number"></div>-->
+          <div id="serial-number-qr">BCY 2373 5284 3441 9508</div>
+          <div id="serial-number"><img src="data:image/png;base64,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"></div>
           <!--|    <button class="btn" id="walletnote-download">Download</button>-->
           <!--|<div id="pin-print"></div>-->
-          <p><b>PIN:</b><span id="pin-print">38803133</span></p>
         </div>
+        <p id="walltenote-pin"><b>PIN:</b><span id="pin-print">38803133</span></p>
         <div class="modal-footer">
           <div class="modalFoot-btn"><button type="button" class="btn btn-default">PRINT</button></div>
-          <div class="modalFoot-btn"><button type="button" class="btn btn-default btn-pdf">PDF</button></div>
+          <div class="modalFoot-btn"><button type="button" id="walletnote-download" class="btn btn-default btn-pdf">PDF</button></div>
           <div class="modalFoot-btn inputEmail">
-            <button type="button" class="btn btn-default">E-MAIL</button>
-            <input type="text" class="">
+            <!--<button type="button" class="btn btn-default">E-MAIL</button>--><input type="text" class="" id="mailWalletnote" name="sendToMail">
           </div>
         </div>
       </div>

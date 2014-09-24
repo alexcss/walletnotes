@@ -161,9 +161,6 @@ h1{
     margin-bottom: 20px;
   }
 }
-#reedemAddres{
-
-}
 .qrcodeicon  {
   position: absolute;
   display: block;
@@ -599,14 +596,17 @@ h1{
 
   .dot-icon {
     position: relative;
-    display: inline-block;
-    border-radius: 10px;
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
-    margin-bottom: 4px;
+      display: inline-block;
+      border-radius: 10px;
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      margin-bottom: 4px;
+    }
+  .dot-icon.orange {
+    background-color: #ff9c00;
   }
-  .dot-icon.dot-inactive {
+    .dot-icon.dot-inactive {
     border-radius: 10px/10px;
     border: solid 2px #B6C930;
     width: 10px;
@@ -649,14 +649,29 @@ h1{
   }
   .modal-body {
     padding-top: 0;
-    img{
+    #walletnote-img{
       width: 100%;
       padding: 0 10px;
       display: block;
     }
-    p{
-      margin-left: 23px;
+    #serial-number-qr{
+      position: absolute;
+      top: 24px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      display: block;
+      text-align: center;
+      font-size: 13px;
+      color: #FFF;
     }
+    #serial-number {
+      position: absolute;
+      bottom: 10%;
+      right: 6%;
+      max-width: 21%;
+    }
+
     #pin-print {
       display: inline-block;
       margin-top: 14px;
@@ -668,6 +683,9 @@ h1{
     background: #FFF;
     border-radius: 6px;
     box-sizing: border-box;
+  }
+  #walltenote-pin {
+    margin-left: 23px;
   }
 }
 
@@ -691,7 +709,7 @@ h1{
       line-height: 35px;
       color: #333;
       box-sizing: border-box;
-      position: absolute;
+//      position: absolute;
       top: 0;
       left: 0;
       right: 0;
@@ -856,7 +874,7 @@ label[for="message-email"]{
     width: 340px;
     margin: 0 auto;
     position: relative;
-    #reedemSerial{
+    .reedemSerial{
       max-width: 291px;
       padding-left: 10px;
       width: 100%;

@@ -37,6 +37,71 @@ html(lang="en")
                             i.dot-icon.dot-inactive
                                 i
                         div
+                            i.dot-icon.orange
+                                i
+                        div
+                            i.dot-icon.dot-inactive
+                                i
+                        div
+                            i.dot-icon.dot-inactive
+                                i
+                    .col-xs-12
+                        .row
+                            h1 WALLETNOTE S/N
+                    .col-xs-12
+                        div.greenLine
+                        h4 Enter walletnote S/N:
+                    .col-xs-12.serialNum
+                        .serialInput
+                            input#id_number.reedemSerial(type="text", placeholder="AAA 0000 0000 0000 0000 0000")
+                            span.qrcodeicon
+                    //-.col-xs-12
+                        p.orangeText
+                            | Super! It’s Valid! :-)
+                        //-div.trackRedeem
+                            | You <a href="#" class="green">can track redeem transaction here</a>
+                    .col-xs-12.text-center.changePinBtn
+                        input#submit.btn(type="submit", value="ENTER")
+            #step4.steps(hidden="")
+                .container
+                    .stepDots
+                        div
+                            i.dot-icon.dot-inactive
+                                i
+                        div
+                            i.dot-icon.orange
+                                i
+                        div
+                            i.dot-icon.dot-inactive
+                                i
+                        div
+                            i.dot-icon.dot-inactive
+                                i
+                    .col-xs-12
+                        .row
+                            h1 WALLETNOTE S/N
+                    .col-xs-12
+                        div.greenLine
+                    .col-xs-12.serialNum
+                        .serialInput
+                            input.reedemSerial(type="text", placeholder="AAA 0000 0000 0000 0000 0000")
+                            span.qrcodeicon
+                        a#submit.btn(href="#")
+                    .col-xs-12
+                        p.orangeText
+                            | Super! It’s Valid! :-)
+                        //-div.trackRedeem
+                            | You <a href="#" class="green">can track redeem transaction here</a>
+                    .col-xs-12.text-center.serialButtons
+                        input#submitPin.btn(type="submit", value="CHANGE PIN")
+                        input#submitRedeem.btn(type="submit", value="REDEEM TO ADDRESS")
+            #stepSubmitRedeem.steps(hidden="")
+                .container
+                    //.stepDots
+                        div
+                            i.dot-icon.dot-inactive
+                                i
+                        div
                             i.dot-icon.dot-inactive
                                 i
                         div
@@ -63,10 +128,96 @@ html(lang="en")
                                     Standard redeem service fee 0.1% = 0.005 m฿. <br>
                                     You will receive 4.995 m฿ to your address
                             input#submit.btn(type="submit", value="Submit")
+            #stepSubmitPin.steps(hidden="")
+                .container
+                    //.stepDots
+                    //    div
+                    //        i.dot-icon.dot-inactive
+                    //            i
+                    //    div
+                    //        i.dot-icon.dot-inactive
+                    //            i
+                    //    div
+                    //        i.dot-icon
+                    //            i
+                    //    div
+                    //        i.dot-icon.dot-inactive
+                    //            i
+                    .col-xs-12
+                        .row
+                            h1 CHANGE PIN
+                    .col-xs-12
+                        div.greenLine
+                    .col-xs-12
+                        .reedemInput
+                            input#id_pincode(type="text", placeholder="Change Pin")
+                            input#id_newpincode(type="text", placeholder="New Pin", title=" 8 or more any digits or letters.\ <br/> 4 different symbols at latest.\ <br/>By default PIN will be as following.", rel="tooltip", data-html="true", data-placement="bottom")
+                        div.text-center
+                            input#submit.btn(type="submit", value="Submit")
+            //.steps(hidden="")
+                .container
+                    .stepDots
+                        div
+                            i.dot-icon.dot-inactive
+                                i
+                        div
+                            i.dot-icon.dot-inactive
+                                i
+                        div
+                            i.dot-icon
+                                i
+                        div
+                            i.dot-icon.dot-inactive
+                                i
+                    .col-xs-12
+                        .row
+                            h1 REDEEM TO ADDRESS
+                    .col-xs-12
+                        div.greenLine
+                    .col-xs-12
+                        p.orangeText
+                            | Well done! Walletnote was redeemed sucsessfully
+                        div.trackRedeem
+                            | You <a href="#" class="green">can track redeem transaction here</a>
+                    .col-xs-12.text-center
+                        input#submit.btn(type="submit", value="CREATE NEW")
+            //.steps    //-(hidden="")
+                .container
+                    //-.stepDots
+                        div
+                            i.dot-icon.dot-inactive
+                                i
+                        div
+                            i.dot-icon.dot-inactive
+                                i
+                        div
+                            i.dot-icon
+                                i
+                        div
+                            i.dot-icon.dot-inactive
+                                i
+                    .col-xs-12
+                        .row
+                            h1 WALLETNOTE S/N
+                    .col-xs-12
+                        div.greenLine
+                    .col-xs-12.serialNum
+                        .serialInput
+                            input.reedemSerial(type="text", placeholder="Bitcoin address to redeem")
+                            span.qrcodeicon
+                        a#submit.btn(href="#")
+                    .col-xs-12
+                        p.orangeText
+                            | Oops! It’s not exist! :-(
+                        //-div.trackRedeem
+                            | You <a href="#" class="green">can track redeem transaction here</a>
+                    //-.col-xs-12.text-center
+                        input#submit.btn(type="submit", value="CREATE NEW")
+
 
         //-#step2.steps(hidden="")
                 .container
-                    .stepDots
+                    //-.stepDots
                         div
                             i.dot-icon.dot-inactive
                                 i
