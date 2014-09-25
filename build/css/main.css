@@ -933,29 +933,38 @@ h1 {
   display: inline-block;
   float: left;
   position: relative; }
-  .modalFoot-btn.inputEmail input {
-    width: 220px;
+  .modalFoot-btn.inputEmail #mailWalletnote {
+    display: block;
+    width: 100%;
     height: 50px;
-    background-color: #fff;
-    font-weight: bold;
-    font-family: Lato;
-    border-radius: 0;
-    border: 0;
+    background-color: #cfcfcf;
+    font-family: Lato, Arial, san-serif;
     line-height: 35px;
     color: #333;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    right: 0;
+    padding-left: 8px;
     border: 2px solid #cfcfcf;
-    -webkit-transition: all 500ms;
-            transition: all 500ms;
-    display: block;
-    margin: 0 auto;
-    z-index: 111;
+    -webkit-transition: all 0.3s ease-in;
+            transition: all 0.3s ease-in;
     background-image: url('../img/enter.png');
     background-repeat: no-repeat;
-    background-position: 90% 50%; }
+    background-position: 120% 50%; }
+    .modalFoot-btn.inputEmail #mailWalletnote::-webkit-input-placeholder {
+      text-align: center;
+      color: #00263f;
+      -webkit-transition: color 0.3s ease-in;
+              transition: color 0.3s ease-in; }
+    .modalFoot-btn.inputEmail #mailWalletnote::-moz-placeholder {
+      text-align: center;
+      color: #00263f;
+      moz-transition: color 0.3s ease-in; }
+    .modalFoot-btn.inputEmail #mailWalletnote:focus, .modalFoot-btn.inputEmail #mailWalletnote:hover {
+      outline: none;
+      background-position: 94% 50%;
+      background-color: #fff; }
+      .modalFoot-btn.inputEmail #mailWalletnote:focus::-webkit-input-placeholder, .modalFoot-btn.inputEmail #mailWalletnote:hover::-webkit-input-placeholder {
+        color: #fff; }
+      .modalFoot-btn.inputEmail #mailWalletnote:focus:-moz-placeholder, .modalFoot-btn.inputEmail #mailWalletnote:hover:-moz-placeholder {
+        color: #fff; }
   .modalFoot-btn .btn {
     position: relative;
     max-width: 220px;
