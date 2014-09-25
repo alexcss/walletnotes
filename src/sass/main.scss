@@ -92,8 +92,9 @@ li.active {
 	border-radius: 0;
 	border: 0;
 	line-height: 35px;
-	color: #333;
+	color: #00263f;
 }
+
 
 .bottomLine {
 	background-color: #0B1A37;
@@ -693,7 +694,6 @@ h1 {
 }
 
 .modalFoot-btn {
-	width: percentage(1/3);
 	margin: 0 auto;
 	box-sizing: border-box;
 	overflow: hidden;
@@ -715,6 +715,8 @@ h1 {
 			background-image: url('../img/enter.png');
 			background-repeat: no-repeat;
 			background-position: 120% 50%;
+            max-width: 220px;
+            margin: 0 auto;
 			&::-webkit-input-placeholder {
 				text-align: center;
 				color: #00263f;
@@ -1017,6 +1019,10 @@ label[for="message-email"] {
 		position: relative;
 		z-index: 8888;
 	}
+    #step2 #qr_code {
+      display: block;
+      margin: 30px auto 0;
+    }
 	.support a {
 		line-height: 20px;
 	}
@@ -1296,6 +1302,9 @@ label[for="message-email"] {
 			padding-left: 30px;
 		}
 	}
+    .modalFoot-btn {
+      width: percentage(1/3);
+    }
 	.wrapper {
 		position: relative;
 		width: 100%;

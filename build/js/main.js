@@ -88,7 +88,7 @@ $(document).ready(function(data) {
 
 
         $("#id_amount").change(function () {
-            $.get('http://walletnotes.org/calc-donate/?amount=' + $(this).val(), function (data) {
+            $.get('//walletnotes.org/calc-donate/?amount=' + $(this).val(), function (data) {
                 console.log(data.donate)
                 donate = data.donate * 1000
                 $("#id_donate").next("label").html("Support the project (add " + donate.toString() + " m฿ donation.)")
@@ -102,7 +102,7 @@ $(document).ready(function(data) {
                 pincode = hex_md5($('#id_pincode').val())
             };
             var amount = $('#id_amount').val() * 1000
-            $.post('http://' + location.host + '/payment/', {pincode: pincode, amount: $('#id_amount').val(), donate: $('#id_donate').prop('checked')}, function (data) {
+            $.post('//' + location.host + '/payment/', {pincode: pincode, amount: $('#id_amount').val(), donate: $('#id_donate').prop('checked')}, function (data) {
                 $("#payment-status").html('')
                 $('#payment_address').html('')
                 $('#qr_code').html('')
@@ -152,7 +152,7 @@ $(document).ready(function(data) {
         })
 
     function recive () {
-        $.get('http://' + location.host + '/recive/', function (data) {
+        $.get('//' + location.host + '/recive/', function (data) {
             if (data) {
                 if (data.payment_status == 1) {
                     $("#payment-status").html('<div class="alert alert-success" role="alert"><strong>Well done!</strong> Payment success!</div>')
@@ -223,7 +223,7 @@ $(document).ready(function(data) {
                 render: 'image',
                 size: 150,
                 fill: qr_fill,
-                text: "http://walletnotes.org/redeem.html?sn=" + serial
+                text: "//walletnotes.org/redeem.html?sn=" + serial
             });
             var qr = $("#serial-number-qr").children("img").attr("src");
             doc.addImage(qr, 'JPEG', 112, 37.1, 30, 30);
@@ -250,7 +250,7 @@ $(document).ready(function(data) {
         return result;
     }
 
-    $(".navbar-nav a").click(function () {
+    $(".navbar-nav a, .createBtn").click(function () {
         event.preventDefault();
         newLocation = this.href;
         $('body').fadeOut(500, newpage);
@@ -296,44 +296,12 @@ $(document).ready(function(data) {
 
     // tolltip + pin
     $("#id_pincode").val(str_rand(8));
-    $.get('http://walletnotes.org/calc-donate/?amount=' + $("#id_amount").val(), function (data) {
+    $.get('//walletnotes.org/calc-donate/?amount=' + $("#id_amount").val(), function (data) {
         console.log(data.donate)
         donate = data.donate * 1000
         $("#id_donate").next("label").html("Support the project (add " + donate.toString() + " m฿ donation to funds.)")
     });
 
     $("[rel='tooltip']").tooltip();
-
-    // email hover with inpur show/hide
-    var mailBl = $('.inputEmail');
-    var emailBtn= $('.inputEmail .btn');
-    var emailInput = $('.inputEmail > input');
-    var emailInputInFocus = false;
-
-    $(mailBl).hover(
-        function () {
-            if (!emailInputInFocus) {
-                emailInputInFocus = true;
-                //console.log(emailInputInFocus);
-                $(emailBtn).fadeTo("slow", 0, function () {
-                    $(this).css('top', '-60px');
-                })
-            }
-        },
-        function () {
-            ($(emailInput).focus());
-        }
-    );
-
-    $(emailInput).on('focusout', function () {
-        emailInputInFocus = false;
-        $(emailBtn).css('top', '0px');
-        $(emailBtn).fadeTo("slow" , 1);
-        //console.log(emailInputInFocus);
-    });
-
-
-
-
 
 });

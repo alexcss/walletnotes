@@ -458,7 +458,7 @@ li.active {
   border-radius: 0;
   border: 0;
   line-height: 35px;
-  color: #333; }
+  color: #00263f; }
 
 .bottomLine {
   background-color: #0B1A37;
@@ -926,7 +926,6 @@ h1 {
   margin-left: 23px; }
 
 .modalFoot-btn {
-  width: 33.33333%;
   margin: 0 auto;
   box-sizing: border-box;
   overflow: hidden;
@@ -947,7 +946,9 @@ h1 {
             transition: all 0.3s ease-in;
     background-image: url('../img/enter.png');
     background-repeat: no-repeat;
-    background-position: 120% 50%; }
+    background-position: 120% 50%;
+    max-width: 220px;
+    margin: 0 auto; }
     .modalFoot-btn.inputEmail #mailWalletnote::-webkit-input-placeholder {
       text-align: center;
       color: #00263f;
@@ -1166,6 +1167,9 @@ label[for="message-email"] {
   .qrSupport {
     position: relative;
     z-index: 8888; }
+  #step2 #qr_code {
+    display: block;
+    margin: 30px auto 0; }
   .support a {
     line-height: 20px; }
   .bottomLine {
@@ -1329,6 +1333,8 @@ label[for="message-email"] {
     width: 150px; }
   #step2 h3, #step2 h4, #step2 h5 {
     padding-left: 30px; }
+  .modalFoot-btn {
+    width: 33.33333%; }
   .wrapper {
     position: relative;
     width: 100%;

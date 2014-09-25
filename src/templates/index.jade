@@ -7,7 +7,7 @@ html(lang="en")
         meta(name="keywords", content="")
         meta(name="robots", content="index,follow")
         title Walletnotes
-        link(href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css", rel="stylesheet")
+        link(href="css/bootstrap.min.css", rel="stylesheet")
         link(rel="stylesheet", href="css/main.css")
         link(rel="icon" href="favicon.ico")
     body
@@ -40,7 +40,7 @@ html(lang="en")
                     p How easy to use can Bitcoin be for any person?
                     p From our point of view, it can be even easer, than cash.
                     //button.btn(onclick="location.href='http://coderbit.net/works/wallet/'") TRY NOW
-                    a.btn(href='create.html') TRY NOW
+                    a.btn.createBtn(href='create.html') TRY NOW
             #just
                 .container
                     h1 JUST CREATE IT, PRINT IT, SPEND IT
@@ -123,7 +123,7 @@ html(lang="en")
                         | Feel the harmony of bitcoin&#8217;s privacy religion. No registration required for creating
                         br
                         | or redeeming Walletnotes!
-                    a.btn(href='create.html') TRY NOW
+                    a.btn.createBtn(href='create.html') TRY NOW
             .push
         .bottomLine
             .bl-block
@@ -165,9 +165,9 @@ html(lang="en")
                                     input#message-email.form-control(type="text", name="email", size="20", maxlength="255", value="")
                             .modal-footer
                                 button#registerModalsubmit.btn.btn-lg.btn-primary(type="submit", name="send_message", style="margin-top: 0;") Submit
-        script(src="//code.jquery.com/jquery-1.11.1.min.js")
+        script(src="js/jquery-1.11.1.min.js")
         script(src="js/TweenMax.min.js")
         script(src="js/jquery.qrcode-0.8.0.min.js")
-        script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
+        script(src="js/bootstrap.min.js")
         script(src="js/jquery.superscrollorama.js")
         script(src="js/main.js")
