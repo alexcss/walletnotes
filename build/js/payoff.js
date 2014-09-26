@@ -9,7 +9,7 @@ var pin
             pin = $('#id_newpincode').val();
             pincode_hash = hex_md5(pin)
         };
-        $.post('http://' + location.host + '/change-pincode/', {id: SN, new_pin: pincode_hash, old_pin: $('#id_pincode').val()}, function (data) {
+        $.post('//' + location.host + '/change-pincode/', {id: SN, new_pin: pincode_hash, old_pin: $('#id_pincode').val()}, function (data) {
                 $("#pin-status").html('')
                 $('#id_newpincode').parent().removeClass('has-error');
                 $('#id_pincode').parent().removeClass('has-error');
@@ -52,7 +52,7 @@ var pin
     function search () {
             $('#id_info').html('')
             $('#change-pincode').html('')
-            $.get('http://' + location.host + '/walletnote/?id=' + $('#id_number').val().replace(/\s+/g, ''), function (data) {
+            $.get('//' + location.host + '/walletnote/?id=' + $('#id_number').val().replace(/\s+/g, ''), function (data) {
                 if (data) {
                     amount = data.cost * 1000
                     commission = data.commission * 1000
@@ -83,7 +83,7 @@ var pin
         }, 'json');
     }
     function payoff () {
-        $.post('http://' + location.host + '/redeem/', {id: SN.replace(/\s+/g, ''), pincode: $('#id_pincode').val(), donate: $('#id_donate').prop('checked'), address: $('#id_address').val()}, function (data) {
+        $.post('//' + location.host + '/redeem/', {id: SN.replace(/\s+/g, ''), pincode: $('#id_pincode').val(), donate: $('#id_donate').prop('checked'), address: $('#id_address').val()}, function (data) {
                 $("#payoff-status").html('')
                 $('#id_address').parent().removeClass('has-error');
                 $('#id_pincode').parent().removeClass('has-error'); 
@@ -144,7 +144,7 @@ $('#payoff-show-btn').click(function () {
 
 $('#id_donate').change(function () {
     if ($(this).prop('checked')) {
-        $.get('http://' + location.host + '/calc-donate/?amount=' + amount/1000, function (data) {
+        $.get('//' + location.host + '/calc-donate/?amount=' + amount/1000, function (data) {
             console.log(data.donate);
             donate = data.donate * 1000;
             d_amount = real_amount - donate;
