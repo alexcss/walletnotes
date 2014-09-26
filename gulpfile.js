@@ -42,17 +42,17 @@ gulp.task('js', function () {
         //.pipe(gulp.dest(outputDir + '/js'));
 });
 
-gulp.task('glueJs', function() {
-    gulp.src([
-        './src/js/includes/responsive-nav.js',
-        './src/js/includes/easings.min.js',
-        './src/js/includes/fullPage.min.js',
-        './src/js/includes/animations.js',
-        './src/js/main.js'
-    ])
-        .pipe(concat('main.js'))
-        .pipe(gulp.dest(outputDir + '/js'));
-});
+//gulp.task('glueJs', function() {
+//    gulp.src([
+//        './src/js/includes/responsive-nav.js',
+//        './src/js/includes/easings.min.js',
+//        './src/js/includes/fullPage.min.js',
+//        './src/js/includes/animations.js',
+//        './src/js/main.js'
+//    ])
+//        .pipe(concat('main.js'))
+//        .pipe(gulp.dest(outputDir + '/js'));
+//});
 
 gulp.task ('sass', function() {
     var config = {};
@@ -66,12 +66,12 @@ gulp.task ('sass', function() {
         .pipe(prefix(AUTOPREFIXER_BROWSERS))
         .pipe(gulp.dest(outputDir + '/css'));
 });
-
-gulp.task('images', function() {
-    return gulp.src('./src/img/**/*')
-        //.pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
-        .pipe(gulp.dest(outputDir + '/img'))
-});
+//
+//gulp.task('images', function() {
+//    return gulp.src('./src/img/**/*')
+//        //.pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
+//        .pipe(gulp.dest(outputDir + '/img'))
+//});
 
 gulp.task('static', function() {
     return gulp.src('src/static/**/*')
@@ -80,10 +80,10 @@ gulp.task('static', function() {
 
 gulp.task('watch', function() {
     gulp.watch('src/templates/**/*.jade', ['jade']);
-    gulp.watch('src/js/**/*.js', ['glueJs']);
+    //gulp.watch('src/js/**/*.js', ['glueJs']);
     gulp.watch('src/js/**/*.js', ['js']);
     gulp.watch('src/sass/**/*.scss', ['sass']);
-    gulp.watch('src/img/**/*', ['images']);
+    //gulp.watch('src/img/**/*', ['images']);
     gulp.watch('src/static/**/*', ['static']);
     livereload.listen();                                        // Create LiveReload server
     gulp.watch(['build/**']).on('change', livereload.changed);   // Watch any files in dist/, reload on change
@@ -91,4 +91,5 @@ gulp.task('watch', function() {
 
 
 
-gulp.task('default', ['jade', 'glueJs', 'js', 'sass', 'images', 'static', 'watch']);
+//gulp.task('default', ['jade', 'glueJs', 'js', 'sass', 'images', 'static', 'watch']);
+gulp.task('default', ['jade', 'js', 'sass', 'static', 'watch']);
